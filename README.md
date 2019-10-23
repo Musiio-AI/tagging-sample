@@ -1,5 +1,7 @@
 # tagging-sample
 Sample code for how to use the Musiio API
+generate_tags.py: tag audio tracks located in a given folder and save tags in .json format for each track
+tags_to_csv.py: check all tag .json files located in a given folder and write the tags to a single CSV file
 
 ## Update constants.py with API Key
 ```python
@@ -31,7 +33,7 @@ API Key: Replace with your Musiio API Key
 ```
 
 ## Convert Tags to CSV
-![Tag Generation](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![Convert Tags to CSV](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 ```text
 Tag Folder: The folder containing your tag jsons 
 Write CSV to Directory: The folder where the CSV will be saved
