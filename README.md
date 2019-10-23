@@ -34,7 +34,7 @@ python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_
 
 
 ## Convert Tags to CSV
-![Convert Tags to CSV](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![Convert Tags to CSV](https://github.com/musiio-user/tagging-sample/blob/patch-5/images/tags_to_csv_gui.png)
 
 **Tag Folder:** The folder containing your tag jsons\
 **Write CSV to Directory:** The folder where the CSV will be saved
