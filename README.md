@@ -4,6 +4,15 @@ Sample code for how to use the Musiio API\
 **tags_to_csv.py:** check all tag .json files located in a given folder and write the tags to a single CSV file\
 **constants.py:** update the value of 'KEY' with your Musiio API Key
 
+## Installation
+```bash
+virtualenv venv
+cd venv\scripts
+activate
+cd ..\..
+pip install -r requirements
+```
+
 ## Update constants.py with API Key
 ```python
 KEY = "Replace With Your Musiio API KEY"
