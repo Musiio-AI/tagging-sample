@@ -28,14 +28,14 @@ python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_
 ## Tag Generation
 ![Tag Generation](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
-**Source Folder:** The folder where your audio tracks are stored
-**Destination Folder:** The folder where you want your tag jsons to be saved
+**Source Folder:** The folder where your audio tracks are stored\
+**Destination Folder:** The folder where you want your tag jsons to be saved\
 **API Key:** Replace with your Musiio API Key
 
 
 ## Convert Tags to CSV
 ![Convert Tags to CSV](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 
-**Tag Folder:** The folder containing your tag jsons 
+**Tag Folder:** The folder containing your tag jsons\
 **Write CSV to Directory:** The folder where the CSV will be saved
 
