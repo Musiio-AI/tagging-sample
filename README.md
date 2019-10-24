@@ -85,4 +85,4 @@ setup(
 ```bash
 python setup.py py2app
 ```
-Replace variables accordingly and follow the same steps for tags_to_csv_gui.py
+Replace 'APP' and 'iconfile' variables accordingly and follow the same steps for tags_to_csv_gui.py
