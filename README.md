@@ -34,7 +34,7 @@ python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_
 
 # GUI Usage
 
-Executables are located in the 'windows' folders
+Executables are located in the 'windows' and 'mac' folders
 
 ## Tag Generation
 ![Tag Generation](https://github.com/musiio-user/tagging-sample/blob/patch-5/images/generate_tags_gui.png)
@@ -85,4 +85,4 @@ setup(
 ```bash
 python setup.py py2app
 ```
-Replace variables accordingly and follow the same steps for tags_to_csv.py
+Replace variables accordingly and follow the same steps for tags_to_csv_gui.py
