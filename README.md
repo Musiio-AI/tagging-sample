@@ -21,13 +21,13 @@ KEY = "Replace With Your Musiio API KEY"
 ## Tag Generation
 
 ```bash
-cd musiio_tagging_scripts
+cd tagging-sample
 python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-path C:/tagging_scripts/tags --tag-selection "content type" "genre" "bpm" "key" "mood" "energy" "instrumentation"
 ```
 
 ## Convert Tags to CSV
 ```bash
-cd musiio_tagging_scripts
+cd tagging-sample
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
 
