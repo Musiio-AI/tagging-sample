@@ -34,7 +34,8 @@ python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_
 
 # GUI Usage
 
-Executables are located in the 'windows' and 'mac' folders
+Executables are located in the 'windows' and 'mac' folders\
+**Note:** The GUI applications are currently not supported on MacOS 10.14.6: https://discussions.apple.com/thread/250549297 
 
 ## Tag Generation
 ![Tag Generation](https://github.com/musiio-user/tagging-sample/blob/patch-5/images/generate_tags_gui.png)
