@@ -155,7 +155,7 @@ def sortTags(tags_path, tags_csv, tags_types, progress=None):
             tags_list = list()
 
             for each in range(len(tags_types)):
-                tags_list.append("N/A")
+                tags_list.append("")
 
             track = file[:-5]
             tags_list[0] = track
