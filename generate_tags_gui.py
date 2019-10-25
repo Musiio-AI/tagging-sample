@@ -2,57 +2,45 @@ import tkinter as tk
 from tkinter import filedialog, StringVar, messagebox, ttk
 from generate_tags import Tagger
 from constants import TAGS, KEY
-from utils import Checkbar
+from utils import Checkbar, checkTextboxInput, processCheckboxes
 
 
 def selectSourceFolder(event=None):
-
+    """
+    Selects the source folder where audio tracks are contained
+    Executed by the 'Select' button
+    """
     filepath = filedialog.askdirectory()
     sourcepath.set(filepath)
 
 
 def selectDestFolder(event=None):
-
+    """
+    Selects the destination folder where tags are to be stored
+    Executed by the 'Select' button
+    """
     destpathinput = filedialog.askdirectory()
     destpath.set(destpathinput)
 
 
-def checkTextboxInput(textbox, selection_str):
-
-    output = selection_str
-
-    text = StringVar()
-    textinput = textbox.get()
-    text.set(textinput)
-    text_str = text.get()
-
-    if text_str != selection_str:
-        output = text_str
-
-    return output
-
-def processCheckboxes(checkboxes):
-
-    tag_selection_bin = list()
-    tag_selection = list()
-    for checkbox in checkboxes:
-        tag_selection_bin += list(checkbox.state())
-
-    for i, tag in enumerate(tag_selection_bin):
-        if tag:
-            tag_selection.append(TAGS[i])
-
-    return tag_selection
-
-
 def run(sourcepath_str, destpath_str, api_key, progress, checkboxes):
+    """
+    Checks source, destination, API key, and checkboxes, and runs tagsFilesTask
+    Executed by the 'Generate Tags' button
+    :param sourcepath_str: str - The selection made by the user for the source folder
+    :param destpath_str: str - The selection made by the user for the destination folder
+    :param api_key: str - The API key entered by the user
+    :param progress: - tkinter Progressbar object
+    :param checkboxes: list - A list of Checkbar objects
+    :return: 'DONE' messagebox if successful, error message if not
+    """
 
     api_key_run = api_key.get()
 
     if len(api_key_run) == 0:
         return messagebox.showerror("Error", "API Key is not entered")
 
-    tag_selection = processCheckboxes(checkboxes)
+    tag_selection = processCheckboxes(checkboxes, TAGS)
 
     t = Tagger()
     progress_str = StringVar()

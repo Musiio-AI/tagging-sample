@@ -1,65 +1,43 @@
 import tkinter as tk
 from tkinter import filedialog, StringVar, messagebox, ttk
 from tags_to_csv import sortTags
-from utils import Checkbar
+from utils import Checkbar, checkTextboxInput, processCheckboxes
 from constants import VALID_TAGS
 
-def processText(tag):
-
-    while tag[0] == " ":
-        tag = tag[1:]
-
-    while tag[-1] == " ":
-        tag = tag[:-1]
-
-    return tag
 
 def selectTagFolder(event=None):
-
+    """
+    Selects the source folder where tags are contained
+    Executed by the 'Select' button
+    """
     filepath = filedialog.askdirectory()
     tagspath.set(filepath)
 
 
 def selectCSVPath(event=None):
-
+    """
+    Selects the destination folder where CSV file is to be saved
+    Executed by the 'Select' button
+    """
     csvpathinput = filedialog.askdirectory()
     csvpath.set(csvpathinput)
 
 
-def checkTextboxInput(textbox, selection_str):
-
-    output = selection_str
-
-    text = StringVar()
-    textinput = textbox.get()
-    text.set(textinput)
-    text_str = text.get()
-
-    if text_str != selection_str:
-        output = text_str
-
-    return output
-
-def processCheckboxes(checkboxes):
-
-    tag_selection_bin = list()
-    tag_selection = list()
-    for checkbox in checkboxes:
-        tag_selection_bin += list(checkbox.state())
-
-    for i, tag in enumerate(tag_selection_bin):
-        if tag:
-            tag_selection.append(VALID_TAGS[i])
-
-    return tag_selection
-
-
 def run(tagspath_str, csvpath_str, progress, checkboxes):
+    """
+    Checks source, destination, API key, and checkboxes, and runs tagsFilesTask
+    Executed by the 'Generate Tags' button
+    :param tagspath_str: str - The selection made by the user for the tags source folder
+    :param csvpath_str: str - The selection made by the user for the csv file destination folder
+    :param progress: - tkinter Progressbar object
+    :param checkboxes: list - A list of Checkbar objects
+    :return: 'DONE' messagebox if successful, error message if not
+    """
 
     tagspath_run = checkTextboxInput(tags_folder_textbox, tagspath_str)
     csvpath_run = checkTextboxInput(csv_directory_textbox, csvpath_str)
 
-    tags_list = processCheckboxes(checkboxes)
+    tags_list = processCheckboxes(checkboxes, VALID_TAGS)
 
     e = sortTags(tagspath_run, csvpath_run, tags_list, progress)
 
