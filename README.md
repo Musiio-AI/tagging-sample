@@ -2,7 +2,7 @@
 Sample code for how to use the Musiio API\
 **generate_tags.py:** tag audio tracks located in a given folder and save tags in .json format for each track\
 **tags_to_csv.py:** check all tag .json files located in a given folder and write the tags to a single CSV file\
-**constants.py:** update the value of 'KEY' with your Musiio API Key
+**constants.py:** update the values of 'KEY' and 'BASE_URL' with your Musiio API Key and API Url.
 
 ## Installation
 ```bash
@@ -16,6 +16,7 @@ pip install -r requirements
 ## Update constants.py with API Key
 ```python
 KEY = "Replace With Your Musiio API KEY"
+BASE_URL = "Replace with Your API URL"
 ```
 
 ## Tag Generation
