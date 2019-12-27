@@ -144,7 +144,7 @@ class Tagger():
          :param api_key: str - Your API key provided by Musiio
          """
 
-        with ThreadPool(5) as pool:
+        with ThreadPool(20) as pool:
             process = partial(self.__processFile, destination_path, tag_selection, gui, api_key)
             _ = pool.map(process, file_list)
 
