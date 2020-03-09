@@ -75,13 +75,13 @@ if __name__ == '__main__':
     progress.grid(row=2, column=1, sticky='w')
 
     # Checkboxes
-    tag_checkboxes1 = Checkbar(root, VALID_TAGS[:5])
+    tag_checkboxes1 = Checkbar(root, VALID_TAGS[:6])
     tag_checkboxes1.grid(row=0, column=5, sticky='w')
-    tag_checkboxes2 = Checkbar(root, VALID_TAGS[5:10])
+    tag_checkboxes2 = Checkbar(root, VALID_TAGS[6:12])
     tag_checkboxes2.grid(row=1, column=5, sticky='w')
-    tag_checkboxes3 = Checkbar(root, VALID_TAGS[10:14])
+    tag_checkboxes3 = Checkbar(root, VALID_TAGS[12:18])
     tag_checkboxes3.grid(row=2, column=5, sticky='w')
-    tag_checkboxes4 = Checkbar(root, VALID_TAGS[14:])
+    tag_checkboxes4 = Checkbar(root, VALID_TAGS[18:])
     tag_checkboxes4.grid(row=3, column=5, sticky='w')
 
     checkboxes = [tag_checkboxes1, tag_checkboxes2, tag_checkboxes3, tag_checkboxes4]

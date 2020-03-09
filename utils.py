@@ -14,7 +14,12 @@ class Checkbar(Frame):
       self.vars = []
 
       for pick in picks:
-         var = tk.IntVar(value=1)
+
+         # Set default of KEY SHARP to unchecked
+         if pick == "KEY SHARP" or pick == "KEY SHARP SECONDARY":
+            var = tk.IntVar(value=0)
+         else:
+            var = tk.IntVar(value=1)
          check = tk.Checkbutton(self, text=pick, variable=var)
          check.pack(side=side, anchor=anchor, expand='yes')
          self.vars.append(var)

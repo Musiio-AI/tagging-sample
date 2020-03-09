@@ -94,9 +94,9 @@ if __name__ == '__main__':
     progress['maximum'] = 100
 
     # Checkboxes
-    tag_checkboxes1 = Checkbar(root, TAGS[:4])
+    tag_checkboxes1 = Checkbar(root, TAGS[:5])
     tag_checkboxes1.grid(row=0, column=5)
-    tag_checkboxes2 = Checkbar(root, TAGS[4:])
+    tag_checkboxes2 = Checkbar(root, TAGS[5:])
     tag_checkboxes2.grid(row=1, column=5)
     checkboxes = [tag_checkboxes1, tag_checkboxes2]
 
