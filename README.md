@@ -40,7 +40,7 @@ Executables are located in the 'windows' folder\
 **Note:** GUI applications for MacOS are currently not available for distribution, but you should be able to build them yourself using the instructions below under 'Rebuilding the GUI'
 
 ## Tag Generation
-![Tag Generation](https://github.com/musiio-user/tagging-sample/blob/patch-5/images/generate_tags_gui.png)
+![Tag Generation](https://github.com/musiio-user/tagging-sample/blob/add-keys-flat-sharp/images/generate_tags_gui.png)
 
 **Source Folder:** The folder where your audio tracks are stored\
 **Destination Folder:** The folder where you want your tag jsons to be saved\
@@ -48,7 +48,7 @@ Executables are located in the 'windows' folder\
 
 
 ## Convert Tags to CSV
-![Convert Tags to CSV](https://github.com/musiio-user/tagging-sample/blob/patch-5/images/tags_to_csv_gui.png)
+![Convert Tags to CSV](https://github.com/musiio-user/tagging-sample/blob/add-keys-flat-sharp/images/tags_to_csv_gui.png)
 
 **Tag Folder:** The folder containing your tag jsons\
 **Write CSV to Directory:** The folder where the CSV will be saved
