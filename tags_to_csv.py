@@ -75,16 +75,16 @@ def checkInstruments(tags_types):
             tags_types.insert(instrument_index, "INSTRUMENT")
             tags_types.insert(instrument_index + 1, "SCORE")
 
-def checkGenreV2(tags_types):
+def checkGenreV3(tags_types):
     """
-    Modifies the header accordingly if Genre V2 tags are required
+    Modifies the header accordingly if Genre V3 tags are required
     :param tags_types: string - The tag types to extract from each tag json file
     """
-    if "GENRE V2" in tags_types:
-        instrument_index = tags_types.index("GENRE V2") + 2
+    if "GENRE V3" in tags_types:
+        instrument_index = tags_types.index("GENRE V3") + 2
 
         for i in range(3):
-            tags_types.insert(instrument_index, "GENRE V2")
+            tags_types.insert(instrument_index, "GENRE V3")
             tags_types.insert(instrument_index + 1, "SCORE")
 
 
@@ -102,7 +102,7 @@ def checkTags(csv_writer, tags_path, file, tags_types, tags_list):
 
         tags = json.load(t)
         instrument = 0
-        genre_v2 = 0
+        genre_v3 = 0
 
         # iterate through this tag file
         for tag in tags:
@@ -116,9 +116,9 @@ def checkTags(csv_writer, tags_path, file, tags_types, tags_list):
             except:
                 continue
 
-            if type == "GENRE V2":
-                index = index + genre_v2
-                genre_v2 += 2
+            if type == "GENRE V3":
+                index = index + genre_v3
+                genre_v3 += 2
 
             if type == "INSTRUMENT":
                 index = index + instrument
@@ -147,7 +147,7 @@ def sortTags(tags_path, tags_csv, tags_types, progress=None):
 
     # create first row headers for csv file
     createHeader(tags_types)
-    checkGenreV2(tags_types)
+    checkGenreV3(tags_types)
     checkInstruments(tags_types)
 
     # get all valid tag json files from the path provided
