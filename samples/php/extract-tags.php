@@ -2,8 +2,8 @@
 
 $curl = curl_init();
 
-$apiKey = "qU_kfDRxCXFnD3a8QVicxmCmF0hjDCKLrY-jxhRU3hIEwkByOOhVI9DeMfxZO7b_";    // Replace with your API Key
-$trackId = "TMP_93DA7D97";  // Replace with Id of the track
+$apiKey = "";    // Replace with your API Key
+$trackId = "";  // Replace with Id of the track
 
 $includeTags = array("CONTENT TYPE", "GENRE V2", "MOOD", "BPM", "KEY SHARP", "ENERGY", "INSTRUMENTATION", "HIT POTENTIAL");
 $requestBody = json_encode( array( "id"=>$trackId , "tags"=> $includeTags ) );

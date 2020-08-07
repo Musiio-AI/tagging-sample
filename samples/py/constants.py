@@ -1,6 +1,6 @@
-KEY = "Replace With Your Musiio API KEY"
+KEY = "" # Replace With Your Musiio API KEY
 
-BASE_URL = "Replace with Your API URL"
+BASE_URL = "" # Replace with Your API URL
 
 TAG_URL = BASE_URL + "/api/v1/extract/tags"
 
