@@ -99,6 +99,17 @@ php youtube-upload.php
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
+#### Upload Audio Link
+
+`upload-audio-link.php`\
+Open the file, replace `$apiKey` `$audioLink` with your own API key and the youtube track link. This script upload the youtube track onto Musiio Tagging Service. To run:
+
+```bash
+php upload-audio-link.php
+```
+
+The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
 #### Extract Tags
 
 `extract-tags.php`\
@@ -110,24 +121,110 @@ php extract-tags.php
 
 The response will be printed out in the console.
 
-### Python sample
+### Python individual sample
 
-**Python version:** 3.6.8\
-`generate_tags.py`\
+The folder `samples/tagging/python-individual` contains scripts that handle individual track tagging
+
+#### Set up running environment
+
+To install all the dependencies necessary for the scripts. Run the following code in your terminal:
+
+For Mac
+
+```bash
+cd samples/tagging/python-individual
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+For Windows
+
+```bash
+cd samples\tagging\python-individual
+virtualenv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+To deactivate virtual environment
+
+```bash
+deactivate
+```
+
+#### 
+
+#### Upload Audio File
+
+`upload-audio-file.py`
+
+Input required `api_key`, `audio_file`. 
+
+To run:
+
+```bash
+python upload-audio-file.py
+```
+
+#### Upload YouTube Link
+
+`upload-youtube-link.py`
+
+Input required `api_key`, `youtube_link`. 
+
+To run:
+
+```bash
+python upload-youtube-link.py
+```
+
+#### Upload Audio Link
+
+`upload-audio-link.py`
+
+Input required `api_key`, `audio_link`. 
+
+To run:
+
+```bash
+python upload-audio-link.py
+```
+
+#### Extract Tags
+
+`extract-tags.py`
+
+Input required `api_key`, `track-id`. 
+
+Available tags: 
+
+`["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY SHARP", "ENERGY", "INSTRUMENTATION"]`
+
+To run:
+
+```bash
+python extract-tags.py
+```
+
+### Python Integrated sample
+
+The folder `samples/tagging/python-integrated` contains scripts that take multiple audio tracks in one folder and tag them one-by-one and output into CSV file.
+
+**Python version:** 3.6.8
+`generate_tags.py`
 tag audio tracks located in a given folder and save tags in .json format for each track\
-`tags_to_csv.py`\
+`tags_to_csv.py`
 check all tag .json files located in a given folder and write the tags to a single CSV file\
-`constants.py`\
+`constants.py`
 update the values of 'KEY' and 'BASE_URL' with your Musiio API Key and API Url\
 
 #### Installation
 
 ```bash
-cd samples\py
+cd samples\tagging\python-integrated
 virtualenv venv
-cd venv\scripts
-activate
-cd ..\..
+venv\Scripts\activate
 pip install -r requirements
 ```
 
@@ -332,7 +429,7 @@ https://www.getpostman.com/collections/9fc329fc3c4bf6b7af6c
 
 #### Add Track
 
-`add-track.php`\
+`add-track.php`
 Open the file, replace `$apiKey` `$audioPath` `$customer_filename`with your own API key and the local path that stores the audio file and filename. Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
 
 ```bash
@@ -343,7 +440,7 @@ The response will be printed out in the console. The `id` field will be the Trac
 
 #### Update Track
 
-`update-track.php`\
+`update-track.php`
 Open the file, replace `$apiKey` `$track_id` with your own API key and the track ID . Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
 
 ```bash
@@ -354,7 +451,7 @@ The response will be printed out in the console. The `id` field will be the Trac
 
 #### Get Track
 
-`get-track.php`\
+`get-track.php`
 Open the file, replace `$apiKey` `$track_id` with your own API key and the track ID. Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
 
 ```bash
@@ -362,3 +459,157 @@ php get-track.php
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
+### Python sample
+
+Python sample is stored under `samples/search/python`
+
+#### Set up running environment
+
+To install all the dependencies necessary for the scripts. Run the following code in your terminal:
+
+For Mac
+
+```bash
+cd samples/search/python
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+For Windows
+
+```bash
+cd samples\search\python
+virtualenv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+To deactivate virtual environment
+
+```bash
+deactivate
+```
+
+#### Add Track
+
+`add-track.py`
+
+You are required to input `api_key`,`audio_file`,`customer_filename`. The rest of the fields are optional
+
+To run:
+
+```bash
+python add-track.py
+```
+
+#### Update Track
+
+`update-track.py`
+
+You are required to input `api_key`,`track_id`. The rest of the fields are optional
+
+To run:
+
+```bash
+python update-track.py
+```
+
+####  Get Track
+
+`get-track.py`
+
+You are required to input `api_key`,`track_id`.
+
+To run:
+
+```bash
+python get-track.py
+```
+
+#### Delete Track
+
+`delete-track.py`
+
+You are required to input `api_key`,`track_id`. 
+
+To run:
+
+```bash
+python delete-track.py
+```
+
+#### Catalog Info
+
+`catalog-info.py`
+
+You are required to input `api_key`. 
+
+To run:
+
+```bash
+python catalog-info.py
+```
+
+#### Upload File
+
+`upload-file.py`
+
+You are required to input `api_key`,`audio_file`. 
+
+To run:
+
+```bash
+python upload-file.py
+```
+
+#### Upload YouTube Link
+
+`upload-youtube-link.py`
+
+You are required to input `api_key`,`youtube_link`. 
+
+To run:
+
+```bash
+python upload-youtube-link.py
+```
+
+#### Extract Search Features
+
+`extract-search-features.py`
+
+You are required to input `api_key`,`track_id`. 
+
+To run:
+
+```bash
+python extract-search-features.py
+```
+
+#### Perform Search
+
+`perform-search.py`
+
+You are required to input `api_key`,`track_id`, `search_text`. You can specify the page number in `page` and number of items per page in `items` 
+
+To run:
+
+```bash
+python perform-search.py
+```
+
+#### Get Search Dictionary
+
+`get-search-dictionary.py`
+
+You are required to input `api_key`. 
+
+To run:
+
+```bash
+python get-search-dictionary.py
+```
+
+#### 
