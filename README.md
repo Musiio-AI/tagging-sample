@@ -94,6 +94,17 @@ php youtube-upload.php
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
+#### Upload Audio Link
+
+`audio-link.php`\
+Open the file, replace `$apiKey` `$audioLink` with your own API key and the youtube track link. This script upload the youtube track onto Musiio Tagging Service. To run:
+
+```bash
+php audio-link.php
+```
+
+The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
 #### Extract Tags
 
 `extract-tags.php`\
