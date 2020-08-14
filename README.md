@@ -68,7 +68,7 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
    ```json
    {
        "id": "TRACK ID HERE",
-       "tags": ["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY FLAT", "KEY SHARP", "ENERGY", "INSTRUMENTATION", "HIT POTENTIAL"]
+       "tags": ["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY SHARP", "ENERGY", "INSTRUMENTATION"]
    }
    ```
    You can add or remove tags from the array in the sample above to customize the tags you want to receive
