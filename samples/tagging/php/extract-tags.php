@@ -5,7 +5,7 @@ $curl = curl_init();
 $apiKey = "";    // Replace with your API Key
 $trackId = "";  // Replace with Id of the track
 
-$includeTags = array("CONTENT TYPE", "GENRE V2", "MOOD", "BPM", "KEY SHARP", "ENERGY", "INSTRUMENTATION", "HIT POTENTIAL");
+$includeTags = array("CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY SHARP", "ENERGY", "INSTRUMENTATION");
 $requestBody = json_encode( array( "id"=>$trackId , "tags"=> $includeTags ) );
 
 $authHeader = $apiKey.":"."";
