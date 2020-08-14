@@ -36,7 +36,6 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
 #### Upload YouTube Link
 
 1. Click on "Upload YouTube Link" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
-
 2. Input the following into the textbox:
 
    ```json
@@ -45,16 +44,25 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
    }
    ```
 
-   
-
 3. Press "**Send**" to send the request.
+4. You will receive response at the bottom panel
 
+#### Upload Audio Link
+
+1. Click on "Upload Audio Link" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
+2. Input the following into the textbox:
+
+   ```json
+   {
+   	"link": "YOUR AUDIO LINK HERE"
+   }
+   ```
+3. Press "**Send**" to send the request.
 4. You will receive response at the bottom panel
 
 #### Extract Tags
 
 1. Click on "Extract Tags" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
-
 2. Input the following into the textbox:
 
    ```json
@@ -63,11 +71,8 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
        "tags": ["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY FLAT", "KEY SHARP", "ENERGY", "INSTRUMENTATION", "HIT POTENTIAL"]
    }
    ```
-
    You can add or remove tags from the array in the sample above to customize the tags you want to receive
-
 3. Press "**Send**" to send the request.
-
 4. You will receive response at the bottom panel
 
 ### PHP sample
