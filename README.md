@@ -430,7 +430,7 @@ https://www.getpostman.com/collections/9fc329fc3c4bf6b7af6c
 #### Add Track
 
 `add-track.php`
-Open the file, replace `$apiKey` `$audioPath` `$customer_filename`with your own API key and the local path that stores the audio file and filename. Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
+Open the file, replace `$apiKey` `$audioPath`with your own API key and the local path that stores the audio file and filename. Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
 
 ```bash
 php add-track.php
@@ -496,7 +496,7 @@ deactivate
 
 `add-track.py`
 
-You are required to input `api_key`,`audio_file`,`customer_filename`. The rest of the fields are optional
+You are required to input `api_key`,`audio_file`. The rest of the fields are optional
 
 To run:
 

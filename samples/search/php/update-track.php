@@ -4,7 +4,6 @@ $curl = curl_init();
 
 $apiKey = "";    // Replace with your API Key. Required
 $track_id = "";  // Replace with the track ID. Required
-$customer_filename = "";
 $customer_track_id = "";
 $primary_customer_track_id = "";
 $version = "";
@@ -22,7 +21,26 @@ $instruments = "";
 $description = "";
 $keywords = "";
 
-$requestBody = array('id' => $track_id,'customer_filename' => $customer_filename,'customer_track_id' => $customer_track_id,'primary_customer_track_id' => $primary_customer_track_id,'version' => $version,'title' => $title,'album' => $album,'artist' => $artist,'year' => $year,'region' => $region,'language' => $language,'explicit' => $explicit,'genre' => $genre,'moods' => $moods,'style' => $style,'instruments' => $instruments,'description' => $description,'keywords' => $keywords);
+$requestBody = array(
+  'id' => $track_id,
+  'customer_track_id' => $customer_track_id,
+  'primary_customer_track_id' => $primary_customer_track_id,
+  'version' => $version,
+  'title' => $title,
+  'album' => $album,
+  'artist' => $artist,
+  'year' => $year,
+  'region' => $region,
+  'language' => $language,
+  'explicit' => $explicit,
+  'genre' => $genre,
+  'moods' => $moods,
+  'style' => $style,
+  'instruments' => $instruments,
+  'description' => $description,
+  'keywords' => $keywords
+);
+
 $authHeader = $apiKey.":"."";
 $encodedAuthHeader = base64_encode($authHeader);
 
