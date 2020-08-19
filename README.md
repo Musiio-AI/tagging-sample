@@ -247,6 +247,59 @@ python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-pa
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
 
+### Node.js sample
+
+#### Set up dependency
+
+```bash
+cd samples/tagging/node
+npm install
+```
+
+#### Upload Audio File
+
+`upload-audio-file.js\
+Open the file, replace `API_KEY` `AUDIO_PATH` with your own API key and the local path that stores the audio file. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
+
+```bash
+node upload-audio-file.js
+```
+
+The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
+#### Upload YouTube Link
+
+`upload-youtube-link.js`\
+Open the file, replace `API_KEY` `YOUTUBE_LINK` with your own API key and the youtube track link. This script upload the youtube track onto Musiio Tagging Service. To run:
+
+```bash
+node upload-youtube-link.js
+```
+
+The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
+#### Upload Audio Link
+
+`upload-audio-link.js`\
+Open the file, replace `API_KEY` `AUDIO_LINK` with your own API key and the youtube track link. This script upload the youtube track onto Musiio Tagging Service. To run:
+
+```bash
+node upload-audio-link.js
+```
+
+The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
+#### Extract Tags
+
+`extract-tags.js`
+Open the file, replace `API_KEY` `TRACK_ID` with your own API key and the Track ID generated after the upload. This script will run the Tagging Service and return the tagging results in the console.
+
+```bash
+node extract-tags.js
+```
+
+The response will be printed out in the console.
+
 ### Windows Executable GUI Usage
 
 Executables are located in the `windows` folder\
@@ -612,4 +665,136 @@ To run:
 python get-search-dictionary.py
 ```
 
-#### 
+### Node.js sample
+
+Node sample is stored under `samples/search/node`
+
+#### Set up running environment
+
+To install all the dependencies necessary for the scripts. Run the following code in your terminal:
+
+```bash
+cd samples/search/node
+npm install
+```
+
+#### Add Track
+
+`add-track.js`
+
+You are required to input `API_KEY`,`AUDIO_PATH`. The rest of the fields are optional
+
+To run:
+
+```bash
+node add-track.js
+```
+
+#### Update Track
+
+`update-track.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. The rest of the fields are optional
+
+To run:
+
+```bash
+node update-track.js
+```
+
+####  Get Track
+
+`get-track.js`
+
+You are required to input `API_KEY`,`TRACK_ID`.
+
+To run:
+
+```bash
+node get-track.js
+```
+
+#### Delete Track
+
+`delete-track.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. 
+
+To run:
+
+```bash
+node delete-track.js
+```
+
+#### Catalog Info
+
+`catalog-info.js`
+
+You are required to input `API_KEY`. 
+
+To run:
+
+```bash
+node catalog-info.js
+```
+
+#### Upload File
+
+`upload-file.js`
+
+You are required to input `API_KEY`,`AUDIO_PATH`. 
+
+To run:
+
+```bash
+node upload-file.js
+```
+
+#### Upload YouTube Link
+
+`upload-youtube-link.js`
+
+You are required to input `API_KEY`,`YOUTUBE_LINK`. 
+
+To run:
+
+```bash
+node upload-youtube-link.js
+```
+
+#### Extract Search Features
+
+`extract-search-features.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. 
+
+To run:
+
+```bash
+node extract-search-features.js
+```
+
+#### Perform Search
+
+`perform-search.js`
+
+You are required to input `API_KEY`,`TRACK_ID`, `SEARCH_TEXT`. You can specify the page number in `PAGE` and number of items per page in `ITEMS_PER_PAGE` 
+
+To run:
+
+```bash
+node perform-search.js
+```
+
+#### Get Search Dictionary
+
+`get-search-dictionary.js`
+
+You are required to input `API_KEY`. 
+
+To run:
+
+```bash
+node get-search-dictionary.js
+```
+
