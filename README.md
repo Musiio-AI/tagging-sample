@@ -681,7 +681,7 @@ python extract-search-features.py
 
 `perform-search.py`
 
-You are required to input `$apiKey`,`$trackID`. You can specify the search text in `$searchText`, the page number in `page` and number of items per page in `items` 
+You are required to input `api_key`,`track_id`. You can specify the search text in `search_text`, the page number in `page` and number of items per page in `items` 
 
 To run:
 
