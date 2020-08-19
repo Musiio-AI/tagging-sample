@@ -1,4 +1,4 @@
-const API_KEY = "";
+const API_KEY = ""; // Your API key here
 
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "Basic " + btoa(API_KEY + ":"));

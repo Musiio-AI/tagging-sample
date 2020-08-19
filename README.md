@@ -121,6 +121,48 @@ php extract-tags.php
 
 The response will be printed out in the console.
 
+### JavaScript (Frontend) sample
+
+JavaScript ( frontend ) tagging sample is to be integrated with frontend web application. Constants required are to be passed in. You can find the code sample in `samples/tagging/js/` folder. Response will be logged in web client console.
+
+#### Upload Audio File
+
+`upload-audio-file.js`
+
+Input required `API_KEY` 
+
+Input file needs to be obtained from the `<input>` tag, as shown in the example below:
+
+ ```html
+<input type="file" id="fileInput">
+...
+<script>
+    var fileInput = document.getElementById("fileInput");
+</script>
+ ```
+
+#### Upload YouTube Link
+
+`upload-youtube-link.js`
+
+Input required `API_KEY`, `YOUTUBE_LINK`. 
+
+#### Upload Audio Link
+
+`upload-audio-link.js`
+
+Input required `API_KEY`, `AUDIO_LINK`. 
+
+#### Extract Tags
+
+`extract-tags.js`
+
+Input required `API_KEY`, `TRACK_ID`. 
+
+Available tags: 
+
+`["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY SHARP", "ENERGY", "INSTRUMENTATION"]`
+
 ### Python individual sample
 
 The folder `samples/tagging/python-individual` contains scripts that handle individual track tagging
@@ -152,8 +194,6 @@ To deactivate virtual environment
 ```bash
 deactivate
 ```
-
-#### 
 
 #### Upload Audio File
 
@@ -460,6 +500,92 @@ php get-track.php
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
+### JavaScript (Frontend) sample
+
+JavaScript ( frontend ) search sample is to be integrated with frontend web application. Constants required are to be passed in. You can find the code sample in `samples/search/js/` folder. Response will be logged in web client console.
+
+#### Add Track
+
+`add-track.js`
+
+You are required to input `API_KEY`. 
+
+Input audio file needs to be obtained from the `<input>` tag, as shown in the example below:
+
+ ```html
+<input type="file" id="fileInput">
+...
+<script>
+    var fileInput = document.getElementById("fileInput");
+</script>
+ ```
+
+The rest of the fields are optional
+
+#### Update Track
+
+`update-track.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. The rest of the fields are optional
+
+####  Get Track
+
+`get-track.js`
+
+You are required to input `API_KEY`,`TRACK_ID`.
+
+#### Delete Track
+
+`delete-track.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. 
+
+#### Catalog Info
+
+`catalog-info.js`
+
+You are required to input `API_KEY`. 
+
+#### Upload File
+
+`upload-file.js`
+
+You are required to input `API_KEY` 
+
+Input audio file needs to be obtained from the `<input>` tag, as shown in the example below:
+
+ ```html
+<input type="file" id="fileInput">
+...
+<script>
+    var fileInput = document.getElementById("fileInput");
+</script>
+ ```
+
+#### Upload YouTube Link
+
+`upload-youtube-link.js`
+
+You are required to input `API_KEY`,`YOUTUBE_LINK`. 
+
+#### Extract Search Features
+
+`extract-search-features.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. 
+
+#### Perform Search
+
+`perform-search.js`
+
+You are required to input `API_KEY`,`TRACK_ID`. You can specify the search text in `SEARCH_TEXT`, page number in `page` and number of items per page in `items` 
+
+#### Get Search Dictionary
+
+`get-search-dictionary.js`
+
+You are required to input `API_KEY`. 
+
 ### Python sample
 
 Python sample is stored under `samples/search/python`
@@ -496,7 +622,7 @@ deactivate
 
 `add-track.py`
 
-You are required to input `api_key`,`audio_file`,`customer_filename`. The rest of the fields are optional
+You are required to input `api_key`,`audio_file`. The rest of the fields are optional
 
 To run:
 
@@ -592,7 +718,7 @@ python extract-search-features.py
 
 `perform-search.py`
 
-You are required to input `api_key`,`track_id`, `search_text`. You can specify the page number in `page` and number of items per page in `items` 
+You are required to input `API_KEY`,`TRACK_ID`. You can specify the search text in `SEARCH_TEXT`, page number in `page` and number of items per page in `items` 
 
 To run:
 
@@ -611,5 +737,3 @@ To run:
 ```bash
 python get-search-dictionary.py
 ```
-
-#### 
