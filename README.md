@@ -367,7 +367,7 @@ https://www.getpostman.com/collections/9fc329fc3c4bf6b7af6c
 #### Add Track
 
 1. Click on "Add Track" query under your collection. On the main panel, click on "Body" and select "form-data"
-2. Under "track" click on "Select Files" under VALUE to select your audio file. Please input **required** "customer_filename" as well.
+2. Under "track" click on "Select Files" under VALUE to select your audio file. 
 3. Fill up remaining track information if needed to.
 4. Press "**Send**" to send the request.
 5. You will receive response at the bottom panel
@@ -470,35 +470,124 @@ https://www.getpostman.com/collections/9fc329fc3c4bf6b7af6c
 #### Add Track
 
 `add-track.php`
-Open the file, replace `$apiKey` `$audioPath` `$customer_filename`with your own API key and the local path that stores the audio file and filename. Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
+
+You are required to input `$apiKey`,`$audioPath`. The rest of the fields are optional
+
+To run:
 
 ```bash
 php add-track.php
 ```
 
-The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
-
 #### Update Track
 
 `update-track.php`
-Open the file, replace `$apiKey` `$track_id` with your own API key and the track ID . Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
+
+You are required to input `$apiKey`,`$track_id`. The rest of the fields are optional
+
+To run:
 
 ```bash
 php update-track.php
 ```
 
-The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
-
-#### Get Track
+####  Get Track
 
 `get-track.php`
-Open the file, replace `$apiKey` `$track_id` with your own API key and the track ID. Replace remaining fields if necessary. This script uploads the audio files in the folder onto Musiio Tagging Service. To run:
+
+You are required to input `$apiKey`,`$track_id`.
+
+To run:
 
 ```bash
 php get-track.php
 ```
 
-The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+#### Delete Track
+
+`delete-track.php`
+
+You are required to input `$apiKey`,`$track_id`. 
+
+To run:
+
+```bash
+php delete-track.php
+```
+
+#### Catalog Info
+
+`catalog-info.php`
+
+You are required to input `$apiKey`. 
+
+To run:
+
+```bash
+php catalog-info.php
+```
+
+#### Upload File
+
+`upload-file.php`
+
+You are required to input `$apiKey`,`$audioFilePath`. 
+
+To run:
+
+```bash
+php upload-file.php
+```
+
+#### Upload YouTube Link
+
+`upload-youtube-link.php`
+
+You are required to input `$apiKey`,`$youtubeUrl`. 
+
+To run:
+
+```bash
+php upload-youtube-link.php
+```
+
+#### Extract Search Features
+
+`extract-search-features.php`
+
+You are required to input `$apiKey`,`$trackID`. 
+
+To run:
+
+```bash
+php extract-search-features.php
+```
+
+#### Perform Search
+
+`perform-search.php`
+
+You are required to input `$apiKey`,`$trackID`. You can specify the search text in `$searchText`, the page number in `page` and number of items per page in `items` 
+
+To run:
+
+```bash
+php perform-search.php
+```
+
+#### Get Search Dictionary
+
+`get-search-dictionary.php`
+
+You are required to input `$apiKey`. 
+
+To run:
+
+```bash
+php get-search-dictionary.php
+```
+
+
 
 ### JavaScript (Frontend) sample
 

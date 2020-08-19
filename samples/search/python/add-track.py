@@ -3,13 +3,11 @@ from requests.auth import HTTPBasicAuth
 
 api_key = ""  # Your API key here, required
 audio_file = "" # Your audio file path here, required
-customer_filename = ""  # Your customer filename here, required
 
 url = "https://api-us.musiio.com/v1/catalog/track"
 
 # you can customize track information but fill up the remaining empty fields below
 payload = {
-  'customer_filename': customer_filename,
   'customer_track_id': '',
   'primary_customer_track_id': '',
   'version': '',
