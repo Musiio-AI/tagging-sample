@@ -15,7 +15,6 @@ var formdata = new FormData();
 formdata.append("track", fileInput.files[0], "file");
 
 // Optional parameters to put in, replace "" with customized values
-formdata.append("customer_filename", "");
 formdata.append("customer_track_id", "");
 formdata.append("primary_customer_track_id", "");
 formdata.append("version", "");

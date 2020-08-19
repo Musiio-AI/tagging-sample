@@ -8,7 +8,6 @@ var formdata = new FormData();
 formdata.append("id", TRACK_ID);
 
 // Optional parameters to put in, replace "" with customized values
-formdata.append("customer_filename", "");
 formdata.append("primary_customer_track_id", "");
 formdata.append("version", "");
 formdata.append("title", "");
