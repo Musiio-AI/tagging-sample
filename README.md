@@ -957,11 +957,17 @@ Copy and paste the code samples Java files in `samples/search/java/` into your p
 - search/
 	| - src/
   |   | - main/com/example/search/
-  |		|		| - AudioLinkUpload.java
-  |		|		|	- AudioUpload.java
-  |		|		|	- YoutubeUpload.java
-  |		|		|	- ExtractTags.java
-  |		|		| - HeadersUtils.java	(utility file)
+  |		|		| - AddTrack.java
+  |		|		|	- UpdateTrack.java
+  |		|		|	- GetTrack.java
+  |		|		|	- DeleteTrack.java
+  |		|		| - CatalogInfo.java
+  |		|		| - AudioUpload.java
+  |		|		| - YouTubeUpload.java
+  |		|		| - ExtractSearchFeatures.java
+  |		|		| - PerformSearch.java
+  |		|		| - GetSearchDictionary.java
+  |		|		|	- HeadersUtils.java	(utility file)
   |   | - test/
   | - target/
   |	- pom.xml
@@ -974,6 +980,218 @@ cd samples/search/java/search
 ```
 
 and then follow the commands below to run each file.
+
+#### Add Track
+
+`AddTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `AUDIO_PATH`, `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.AddTrack"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Update Track
+
+`UpdateTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `TRACK_ID`, `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.UpdateTrack"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Get Track
+
+`GetTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `TRACK_ID`, `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.GetTrack"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Delete Track
+
+`DeleteTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `TRACK_ID`, `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.DeleteTrack"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Catalog Info
+
+`CatalogInfo.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.CatalogInfo"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Upload Audio File
+
+`AudioUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`, `AUDIO_PATH`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.AudioUpload"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Upload YouTube Link
+
+`YoutubeUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`, `YOUTUBE_LINK`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.YoutubeUpload"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Extract Search Features
+
+`ExtractSearchFeatures.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`, `TRACK_ID`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.ExtractSearchFeatures"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Perform Search
+
+`PerformSearch.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`, `TRACK_ID`
+
+Optional: `SEARCH_TEXT`, `PAGE`, `ITEMS_PER_PAGE`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.PerformSearch"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Get Search Dictionary
+
+`GetSearchDictionary.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.GetSearchDictionary"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
 
 ### Node.js sample
 
