@@ -247,6 +247,159 @@ python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-pa
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
 
+### Java sample
+
+`samples/tagging/java`
+
+#### Set up Maven project
+
+The Java sample shown here uses `Maven` as the Java project management tool. Hence, a `pom.xml` file is required for installing dependencies necessary to run the code samples. A detailed instruction on how to create a Maven project can be found here: https://spring.io/guides/gs/maven/
+
+Initialize your Maven project, in this example, we will use the following project configuration:
+
+```
+<groupId>com.example.tagging</groupId>
+<artifactId>tagging</artifactId>
+```
+
+Your project structure will look something like this:
+
+```
+(/samples/tagging/java/)
+- tagging/
+	| - src/
+  |   | - main/com/example/tagging/
+  |   | - test/
+  | - target/
+  |	- pom.xml
+```
+
+Open `pom.xml` and add the following dependencies in the `<dependencies></dependencies>` tag
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <version>2.3.3.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.github.cliftonlabs/json-simple -->
+<dependency>
+  <groupId>com.github.cliftonlabs</groupId>
+  <artifactId>json-simple</artifactId>
+  <version>3.1.0</version>
+</dependency>
+```
+
+Copy and paste the code samples Java files in `samples/tagging/java/` into your project folder `tagging/src/main/com/example/tagging/` such that your project structure looks something like this:
+
+```
+(/samples/tagging/java/)
+- tagging/
+	| - src/
+  |   | - main/com/example/tagging/
+  |		|		| - AudioLinkUpload.java
+  |		|		|	- AudioUpload.java
+  |		|		|	- YoutubeUpload.java
+  |		|		|	- ExtractTags.java
+  |		|		| - HeadersUtils.java	(utility file)
+  |   | - test/
+  | - target/
+  |	- pom.xml
+```
+
+Once you are done, go back to the root directory of your project, in this case:
+
+```bash
+cd samples/tagging/java/tagging
+```
+
+and then follow the commands below to run each file.
+
+#### Upload Audio File
+
+`AudioUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required: `AUDIO_PATH`, `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
+#### Upload Audio Link
+
+`AudioLinkUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required: `AUDIO_LINK`, `API_KEY`
+
+To run:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
+#### Upload YouTube Link
+
+`YouTubeUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required: `YOUTUBE_LINK`, `API_KEY`
+
+To run:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
+#### Extract Tags
+
+`ExtractTags.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required: `TRACK_ID`, `API_KEY`
+
+To run:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
 ### Node.js sample
 
 #### Set up dependency
@@ -753,6 +906,75 @@ To run:
 ```bash
 python get-search-dictionary.py
 ```
+### Java sample
+
+`samples/search/java`
+
+#### Set up Maven project
+
+The Java sample shown here uses `Maven` as the Java project management tool. Hence, a `pom.xml` file is required for installing dependencies necessary to run the code samples. A detailed instruction on how to create a Maven project can be found here: https://spring.io/guides/gs/maven/
+
+Initialize your Maven project, in this example, we will use the following project configuration:
+
+```
+<groupId>com.example.search</groupId>
+<artifactId>search</artifactId>
+```
+
+Your project structure will look something like this:
+
+```
+(/samples/search/java/)
+- search/
+	| - src/
+  |   | - main/com/example/search/
+  |   | - test/
+  | - target/
+  |	- pom.xml
+```
+
+Open `pom.xml` and add the following dependencies in the `<dependencies></dependencies>` tag
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <version>2.3.3.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.github.cliftonlabs/json-simple -->
+<dependency>
+  <groupId>com.github.cliftonlabs</groupId>
+  <artifactId>json-simple</artifactId>
+  <version>3.1.0</version>
+</dependency>
+```
+
+Copy and paste the code samples Java files in `samples/search/java/` into your project folder `search/src/main/com/example/search/` such that your project structure looks something like this:
+
+```
+(/samples/search/java/)
+- search/
+	| - src/
+  |   | - main/com/example/search/
+  |		|		| - AudioLinkUpload.java
+  |		|		|	- AudioUpload.java
+  |		|		|	- YoutubeUpload.java
+  |		|		|	- ExtractTags.java
+  |		|		| - HeadersUtils.java	(utility file)
+  |   | - test/
+  | - target/
+  |	- pom.xml
+```
+
+Once you are done, go back to the root directory of your project, in this case:
+
+```bash
+cd samples/search/java/search
+```
+
+and then follow the commands below to run each file.
+
 ### Node.js sample
 
 Node sample is stored under `samples/search/node`
