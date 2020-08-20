@@ -267,11 +267,11 @@ Your project structure will look something like this:
 ```
 (/samples/tagging/java/)
 - tagging/
-	| - src/
+  | - src/
   |   | - main/com/example/tagging/
   |   | - test/
   | - target/
-  |	- pom.xml
+  | - pom.xml
 ```
 
 Open `pom.xml` and add the following dependencies in the `<dependencies></dependencies>` tag
@@ -296,16 +296,16 @@ Copy and paste the code samples Java files in `samples/tagging/java/` into your 
 ```
 (/samples/tagging/java/)
 - tagging/
-	| - src/
+  | - src/
   |   | - main/com/example/tagging/
-  |		|		| - AudioLinkUpload.java
-  |		|		|	- AudioUpload.java
-  |		|		|	- YoutubeUpload.java
-  |		|		|	- ExtractTags.java
-  |		|		| - HeadersUtils.java	(utility file)
+  |   |   | - AudioLinkUpload.java
+  |   |   |	- AudioUpload.java
+  |   |   |	- YoutubeUpload.java
+  |   |   |	- ExtractTags.java
+  |   |   | - HeadersUtils.java	(utility file)
   |   | - test/
   | - target/
-  |	- pom.xml
+  | - pom.xml
 ```
 
 Once you are done, go back to the root directory of your project, in this case:
@@ -926,11 +926,11 @@ Your project structure will look something like this:
 ```
 (/samples/search/java/)
 - search/
-	| - src/
+  | - src/
   |   | - main/com/example/search/
   |   | - test/
   | - target/
-  |	- pom.xml
+  | - pom.xml
 ```
 
 Open `pom.xml` and add the following dependencies in the `<dependencies></dependencies>` tag
@@ -955,22 +955,22 @@ Copy and paste the code samples Java files in `samples/search/java/` into your p
 ```
 (/samples/search/java/)
 - search/
-	| - src/
+  | - src/
   |   | - main/com/example/search/
-  |		|		| - AddTrack.java
-  |		|		|	- UpdateTrack.java
-  |		|		|	- GetTrack.java
-  |		|		|	- DeleteTrack.java
-  |		|		| - CatalogInfo.java
-  |		|		| - AudioUpload.java
-  |		|		| - YouTubeUpload.java
-  |		|		| - ExtractSearchFeatures.java
-  |		|		| - PerformSearch.java
-  |		|		| - GetSearchDictionary.java
-  |		|		|	- HeadersUtils.java	(utility file)
+  |   |   | - AddTrack.java
+  |   |   | - UpdateTrack.java
+  |   |   | - GetTrack.java
+  |   |   | - DeleteTrack.java
+  |   |   | - CatalogInfo.java
+  |   |   | - AudioUpload.java
+  |   |   | - YouTubeUpload.java
+  |   |   | - ExtractSearchFeatures.java
+  |   |   | - PerformSearch.java
+  |   |   | - GetSearchDictionary.java
+  |   |   | - HeadersUtils.java	(utility file)
   |   | - test/
   | - target/
-  |	- pom.xml
+  | - pom.xml
 ```
 
 Once you are done, go back to the root directory of your project, in this case:
