@@ -12,11 +12,11 @@ import org.springframework.web.client.RestTemplate;
 import java.io.File;
 
 public class AudioUpload {
-    private static final String AUDIO_PATH = "";    // Your Audio file path
     private static final String API_KEY = "";       // Your API key
     private static final String URL = "https://api-us.musiio.com/api/v1/upload/file";
     public static void main(String[] args) {
-        File audioFile = new File(AUDIO_PATH);
+        String audioPath = args[0];  // Input audio file path as command argument "-Dexec.args='audio file path here'"
+        File audioFile = new File(audioPath);
         HttpHeaders headers = HeadersUtils.createHeaders(API_KEY, "");
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
         MultiValueMap<String, Object> requestBody = new LinkedMultiValueMap<>();

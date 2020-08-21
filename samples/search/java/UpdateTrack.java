@@ -10,14 +10,14 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 public class UpdateTrack {
-    private static final String TRACK_ID = "";    // Track ID here
     private static final String API_KEY = "";       // Your API key
     private static final String URL = "https://api-us.musiio.com/v1/catalog/track";
     public static void main(String[] args) {
+        String trackId = args[0]; // input track ID in command: "-Dexec.args='track id here'"
         HttpHeaders headers = HeadersUtils.createHeaders(API_KEY, "");
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
         MultiValueMap<String, Object> requestBody = new LinkedMultiValueMap<>();
-        requestBody.add("id", TRACK_ID);
+        requestBody.add("id", trackId);
         requestBody.add("primary_customer_track_id", "");
         requestBody.add("version", "");
         requestBody.add("title", "");

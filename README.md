@@ -283,12 +283,6 @@ Open `pom.xml` and add the following dependencies in the `<dependencies></depend
   <artifactId>spring-boot-starter-web</artifactId>
   <version>2.3.3.RELEASE</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/com.github.cliftonlabs/json-simple -->
-<dependency>
-  <groupId>com.github.cliftonlabs</groupId>
-  <artifactId>json-simple</artifactId>
-  <version>3.1.0</version>
-</dependency>
 ```
 
 Copy and paste the code samples Java files in `samples/tagging/java/` into your project folder `tagging/src/main/com/example/tagging/` such that your project structure looks something like this:
@@ -327,12 +321,12 @@ and then follow the commands below to run each file.
   ...
   ```
 
-Required: `AUDIO_PATH`, `API_KEY`
+Required:  `API_KEY` 
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload"
+mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload" -Dexec.args="audio file path here"
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
@@ -348,12 +342,12 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload"
   ...
   ```
 
-Required: `AUDIO_LINK`, `API_KEY`
+Required: `API_KEY`
 
 To run:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload"
+mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload" -Dexec.args="audio link here"
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
@@ -369,12 +363,12 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload"
   ...
   ```
 
-Required: `YOUTUBE_LINK`, `API_KEY`
+Required:  `API_KEY`
 
 To run:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload"
+mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload" -Dexec.args="Youtube link here"
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
@@ -390,12 +384,12 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload"
   ...
   ```
 
-Required: `TRACK_ID`, `API_KEY`
+Required:  `API_KEY`
 
 To run:
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags"
+mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags" -Dexec.args="track ID here"
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
@@ -942,12 +936,6 @@ Open `pom.xml` and add the following dependencies in the `<dependencies></depend
   <artifactId>spring-boot-starter-web</artifactId>
   <version>2.3.3.RELEASE</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/com.github.cliftonlabs/json-simple -->
-<dependency>
-  <groupId>com.github.cliftonlabs</groupId>
-  <artifactId>json-simple</artifactId>
-  <version>3.1.0</version>
-</dependency>
 ```
 
 Copy and paste the code samples Java files in `samples/search/java/` into your project folder `search/src/main/com/example/search/` such that your project structure looks something like this:
@@ -992,12 +980,12 @@ and then follow the commands below to run each file.
   ...
   ```
 
-Required: `AUDIO_PATH`, `API_KEY`
+Required:  `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.AddTrack"
+mvn exec:java -Dexec.mainClass="com.example.search.AddTrack" -Dexec.args="audio file path here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1013,12 +1001,12 @@ mvn exec:java -Dexec.mainClass="com.example.search.AddTrack"
   ...
   ```
 
-Required: `TRACK_ID`, `API_KEY`
+Required:  `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.UpdateTrack"
+mvn exec:java -Dexec.mainClass="com.example.search.UpdateTrack" -Dexec.args="track ID here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1034,12 +1022,12 @@ mvn exec:java -Dexec.mainClass="com.example.search.UpdateTrack"
   ...
   ```
 
-Required: `TRACK_ID`, `API_KEY`
+Required: `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.GetTrack"
+mvn exec:java -Dexec.mainClass="com.example.search.GetTrack" -Dexec.args="track ID here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1055,12 +1043,12 @@ mvn exec:java -Dexec.mainClass="com.example.search.GetTrack"
   ...
   ```
 
-Required: `TRACK_ID`, `API_KEY`
+Required:  `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.DeleteTrack"
+mvn exec:java -Dexec.mainClass="com.example.search.DeleteTrack" -Dexec.args="track ID here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1097,12 +1085,12 @@ mvn exec:java -Dexec.mainClass="com.example.search.CatalogInfo"
   ...
   ```
 
-Required: `API_KEY`, `AUDIO_PATH`
+Required: `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.AudioUpload"
+mvn exec:java -Dexec.mainClass="com.example.search.AudioUpload" -Dexec.args="audio file path here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1118,12 +1106,12 @@ mvn exec:java -Dexec.mainClass="com.example.search.AudioUpload"
   ...
   ```
 
-Required: `API_KEY`, `YOUTUBE_LINK`
+Required: `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.YoutubeUpload"
+mvn exec:java -Dexec.mainClass="com.example.search.YoutubeUpload" -Dexec.args="youtube link here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1139,12 +1127,12 @@ mvn exec:java -Dexec.mainClass="com.example.search.YoutubeUpload"
   ...
   ```
 
-Required: `API_KEY`, `TRACK_ID`
+Required: `API_KEY`
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.ExtractSearchFeatures"
+mvn exec:java -Dexec.mainClass="com.example.search.ExtractSearchFeatures" -Dexec.args="track ID here"
 ```
 
 [Note: replace `com.example.search` with your own project group ID]
@@ -1160,15 +1148,25 @@ mvn exec:java -Dexec.mainClass="com.example.search.ExtractSearchFeatures"
   ...
   ```
 
-Required: `API_KEY`, `TRACK_ID`
+Required: `API_KEY`
 
-Optional: `SEARCH_TEXT`, `PAGE`, `ITEMS_PER_PAGE`
+Optional: `searchText`, `page`, `items`
+
+​		Specify the optional arguments in the command line followed by the track ID, only integer values are allowed for `page` and `items`. If unspecified, `searchText` is deafult empty, `page` default to be 0, `items` default to be 50.
 
 To run: 
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.search.PerformSearch"
+mvn exec:java -Dexec.mainClass="com.example.search.PerformSearch" -Dexec.args="{track ID here} {searchText} {page} {items}"
 ```
+
+Example:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.PerformSearch" -Dexec.args="TMP_-biOGdYiF-I 'this is my search text' 1 20"
+```
+
+Meaning: use search text: 'this is my search text', query page number 1 and 20 items per page.
 
 [Note: replace `com.example.search` with your own project group ID]
 
