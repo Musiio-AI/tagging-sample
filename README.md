@@ -9,21 +9,21 @@ Below is a breakdown of the code sample repository structure:
 ```
 Musiio Code Sample (/samples/)
 -- tagging/
-|		|
-|		|--python-individual/	(to run with single track)
-|		|--python-integrated/	(to run with bulk upload)
-|		|--java/	(Java samples)
-|		|--php/		(PHP samples)
-|		|--js/	(JavaScript samples)
-|		|--node/	(Node.js samples)
-|		|
+|	|
+|	|--python-individual/	(to run with single track)
+|	|--python-integrated/	(to run with bulk upload)
+|	|--java/	(Java samples)
+|	|--php/		(PHP samples)
+|	|--js/	(JavaScript samples)
+|	|--node/	(Node.js samples)
+|	|
 -- search/
-|		|
-|		|--python/	(Python samples)
-|		|--java/	(Java samples)
-|		|--php/		(PHP samples)
-|		|--js/		(JavaScript samples)
-|		|--node/	(Node.js samples)
+|	|
+|	|--python/	(Python samples)
+|	|--java/	(Java samples)
+|	|--php/		(PHP samples)
+|	|--js/		(JavaScript samples)
+|	|--node/	(Node.js samples)
 ```
 
 [TOC]
