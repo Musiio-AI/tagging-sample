@@ -1,6 +1,30 @@
 # Musiio Code Sample
 
-Sample codes for generating tags using Musiio Tagging Service, from given audio tracks source or youtube links.
+This repository contains code samples for using Musiio API services (Tagging & Search). **Tagging** is that given input tracks via audio files or YouTube links, the Tagging service will return a list of classifications that the Musiio AI predicts for a particular track, for example, content type, bpm, key, genre, instruments, etc. **Search** allows end users to upload tracks to their catalog and performs feature extraction on the tracks. It can then be used to search through the catalog to find similar tracks that match the given features.
+
+The code samples are separated into **Tagging** and **Search**, each in a separate folder (in `/samples`). Within each folder, you can find detailed code samples for various languages such as Python, PHP, Java, JavaScript and Node.js. A Postman collection is also provided in the documentation below for users who would like to try out in the GUI first.
+
+Below is a breakdown of the code sample repository structure:
+
+```
+Musiio Code Sample (/samples/)
+-- tagging/
+|		|
+|		|--python-individual/	(to run with single track)
+|		|--python-integrated/	(to run with bulk upload)
+|		|--java/	(Java samples)
+|		|--php/		(PHP samples)
+|		|--js/	(JavaScript samples)
+|		|--node/	(Node.js samples)
+|		|
+-- search/
+|		|
+|		|--python/	(Python samples)
+|		|--java/	(Java samples)
+|		|--php/		(PHP samples)
+|		|--js/		(JavaScript samples)
+|		|--node/	(Node.js samples)
+```
 
 [TOC]
 
