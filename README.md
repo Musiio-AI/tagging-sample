@@ -287,6 +287,153 @@ python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-pa
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
 
+### Java sample
+
+`samples/tagging/java`
+
+#### Set up Maven project
+
+The Java sample shown here uses `Maven` as the Java project management tool. Hence, a `pom.xml` file is required for installing dependencies necessary to run the code samples. A detailed instruction on how to create a Maven project can be found here: https://spring.io/guides/gs/maven/
+
+Initialize your Maven project, in this example, we will use the following project configuration:
+
+```
+<groupId>com.example.tagging</groupId>
+<artifactId>tagging</artifactId>
+```
+
+Your project structure will look something like this:
+
+```
+(/samples/tagging/java/)
+- tagging/
+  | - src/
+  |   | - main/com/example/tagging/
+  |   | - test/
+  | - target/
+  | - pom.xml
+```
+
+Open `pom.xml` and add the following dependencies in the `<dependencies></dependencies>` tag
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <version>2.3.3.RELEASE</version>
+</dependency>
+```
+
+Copy and paste the code samples Java files in `samples/tagging/java/` into your project folder `tagging/src/main/com/example/tagging/` such that your project structure looks something like this:
+
+```
+(/samples/tagging/java/)
+- tagging/
+  | - src/
+  |   | - main/com/example/tagging/
+  |   |   | - AudioLinkUpload.java
+  |   |   |	- AudioUpload.java
+  |   |   |	- YoutubeUpload.java
+  |   |   |	- ExtractTags.java
+  |   |   | - HeadersUtils.java	(utility file)
+  |   | - test/
+  | - target/
+  | - pom.xml
+```
+
+Once you are done, go back to the root directory of your project, in this case:
+
+```bash
+cd samples/tagging/java/tagging
+```
+
+and then follow the commands below to run each file.
+
+#### Upload Audio File
+
+`AudioUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required:  `API_KEY` 
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload" -Dexec.args="audio file path here"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
+#### Upload Audio Link
+
+`AudioLinkUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload" -Dexec.args="audio link here"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
+#### Upload YouTube Link
+
+`YouTubeUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required:  `API_KEY`
+
+To run:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload" -Dexec.args="Youtube link here"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
+#### Extract Tags
+
+`ExtractTags.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.tagging`)
+
+  ```java
+  package com.example.tagging;
+  ...
+  ```
+
+Required:  `API_KEY`
+
+To run:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags" -Dexec.args="track ID here"
+```
+
+[Note: replace `com.example.tagging` with your own project group ID]
+
 ### Node.js sample
 
 #### Set up dependency
@@ -879,6 +1026,297 @@ To run:
 ```bash
 python get-search-dictionary.py
 ```
+### Java sample
+
+`samples/search/java`
+
+#### Set up Maven project
+
+The Java sample shown here uses `Maven` as the Java project management tool. Hence, a `pom.xml` file is required for installing dependencies necessary to run the code samples. A detailed instruction on how to create a Maven project can be found here: https://spring.io/guides/gs/maven/
+
+Initialize your Maven project, in this example, we will use the following project configuration:
+
+```
+<groupId>com.example.search</groupId>
+<artifactId>search</artifactId>
+```
+
+Your project structure will look something like this:
+
+```
+(/samples/search/java/)
+- search/
+  | - src/
+  |   | - main/com/example/search/
+  |   | - test/
+  | - target/
+  | - pom.xml
+```
+
+Open `pom.xml` and add the following dependencies in the `<dependencies></dependencies>` tag
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <version>2.3.3.RELEASE</version>
+</dependency>
+```
+
+Copy and paste the code samples Java files in `samples/search/java/` into your project folder `search/src/main/com/example/search/` such that your project structure looks something like this:
+
+```
+(/samples/search/java/)
+- search/
+  | - src/
+  |   | - main/com/example/search/
+  |   |   | - AddTrack.java
+  |   |   | - UpdateTrack.java
+  |   |   | - GetTrack.java
+  |   |   | - DeleteTrack.java
+  |   |   | - CatalogInfo.java
+  |   |   | - AudioUpload.java
+  |   |   | - YouTubeUpload.java
+  |   |   | - ExtractSearchFeatures.java
+  |   |   | - PerformSearch.java
+  |   |   | - GetSearchDictionary.java
+  |   |   | - HeadersUtils.java	(utility file)
+  |   | - test/
+  | - target/
+  | - pom.xml
+```
+
+Once you are done, go back to the root directory of your project, in this case:
+
+```bash
+cd samples/search/java/search
+```
+
+and then follow the commands below to run each file.
+
+#### Add Track
+
+`AddTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required:  `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.AddTrack" -Dexec.args="audio file path here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Update Track
+
+`UpdateTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required:  `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.UpdateTrack" -Dexec.args="track ID here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Get Track
+
+`GetTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.GetTrack" -Dexec.args="track ID here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Delete Track
+
+`DeleteTrack.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required:  `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.DeleteTrack" -Dexec.args="track ID here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Catalog Info
+
+`CatalogInfo.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.CatalogInfo"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Upload Audio File
+
+`AudioUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.AudioUpload" -Dexec.args="audio file path here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Upload YouTube Link
+
+`YoutubeUpload.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.YoutubeUpload" -Dexec.args="youtube link here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Extract Search Features
+
+`ExtractSearchFeatures.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.ExtractSearchFeatures" -Dexec.args="track ID here"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Perform Search
+
+`PerformSearch.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+Optional: `searchText`, `page`, `items`
+
+​		Specify the optional arguments in the command line followed by the track ID, only integer values are allowed for `page` and `items`. If unspecified, `searchText` is deafult empty, `page` default to be 0, `items` default to be 50.
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.PerformSearch" -Dexec.args="{track ID here} {searchText} {page} {items}"
+```
+
+Example:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.PerformSearch" -Dexec.args="TMP_-biOGdYiF-I 'this is my search text' 1 20"
+```
+
+Meaning: use search text: 'this is my search text', query page number 1 and 20 items per page.
+
+[Note: replace `com.example.search` with your own project group ID]
+
+#### Get Search Dictionary
+
+`GetSearchDictionary.java`
+
+* Replcae package name with your own project group ID, (in our case here: `com.example.search`)
+
+  ```java
+  package com.example.search;
+  ...
+  ```
+
+Required: `API_KEY`
+
+To run: 
+
+```bash
+mvn exec:java -Dexec.mainClass="com.example.search.GetSearchDictionary"
+```
+
+[Note: replace `com.example.search` with your own project group ID]
+
 ### Node.js sample
 
 Node sample is stored under `samples/search/node`
