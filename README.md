@@ -285,7 +285,9 @@ To run:
 ```bash
 python upload-audio-file.py
 ```
+
 <a name="py13" />
+
 ### Upload YouTube Link
 
 `upload-youtube-link.py`
@@ -297,6 +299,7 @@ To run:
 ```bash
 python upload-youtube-link.py
 ```
+
 <a name="py14" />
 ### Upload Audio Link
 
@@ -309,6 +312,7 @@ To run:
 ```bash
 python upload-audio-link.py
 ```
+
 <a name="py15" />
 ### Extract Tags
 
@@ -325,6 +329,7 @@ To run:
 ```bash
 python extract-tags.py
 ```
+
 <a name="python2" />
 ## Python Integrated sample
 
@@ -337,6 +342,7 @@ tag audio tracks located in a given folder and save tags in .json format for eac
 check all tag .json files located in a given folder and write the tags to a single CSV file\
 `constants.py`
 update the values of 'KEY' and 'BASE_URL' with your Musiio API Key and API Url\
+
 <a name="py21" />
 ### Installation
 
@@ -346,6 +352,7 @@ virtualenv venv
 venv\Scripts\activate
 pip install -r requirements
 ```
+
 <a name="py22" />
 ### Update constants.py with API Key
 
@@ -353,22 +360,26 @@ pip install -r requirements
 KEY = "Replace With Your Musiio API KEY"
 BASE_URL = "Replace with Your API URL"
 ```
+
 <a name="py23" />
 ### Tag Generation
 
 ```bash
 python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-path C:/tagging_scripts/tags --tag-selection "content type" "genre" "bpm" "key" "mood" "energy" "instrumentation"
 ```
+
 <a name="py24" />
 ### Convert Tags to CSV
 
 ```bash
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
+
 <a name="java" />
 ## Java sample
 
 `samples/java`
+
 <a name="java1" />
 ### Set up Maven project
 
@@ -449,6 +460,7 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload" -Dexec.args="au
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
+
 <a name="java3" />
 ### Upload Audio Link
 
@@ -470,6 +482,7 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload" -Dexec.args
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
+
 <a name="java4" />
 ### Upload YouTube Link
 
@@ -491,6 +504,7 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload" -Dexec.args="
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
+
 <a name="java5" />
 ### Extract Tags
 
@@ -512,8 +526,10 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags" -Dexec.args="tr
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
+
 <a name="node" />
 ## Node.js sample
+
 <a name="node1" />
 ### Set up dependency
 
@@ -521,6 +537,7 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags" -Dexec.args="tr
 cd samples/tagging/node
 npm install
 ```
+
 <a name="node2" />
 ### Upload Audio File
 
@@ -532,6 +549,7 @@ node upload-audio-file.js
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
 <a name="node3" />
 ### Upload YouTube Link
 
@@ -543,6 +561,7 @@ node upload-youtube-link.js
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
 <a name="node4" />
 ### Upload Audio Link
 
@@ -554,6 +573,7 @@ node upload-audio-link.js
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
+
 <a name="node5" />
 ### Extract Tags
 
@@ -565,11 +585,13 @@ node extract-tags.js
 ```
 
 The response will be printed out in the console.
+
 <a name="windows" />
 ## Windows Executable GUI Usage
 
 Executables are located in the `windows` folder\
 **Note:** GUI applications for MacOS are currently not available for distribution, but you should be able to build them yourself using the instructions below under 'Rebuilding the GUI'
+
 <a name="windows1" />
 ### Tag Generation
 
@@ -582,15 +604,17 @@ Executables are located in the `windows` folder\
 
 **Tag Folder:** The folder containing your tag jsons\
 **Write CSV to Directory:** The folder where the CSV will be saved
-<a name="rebuild" />
 
+<a name="rebuild" />
 ## Rebuilding the GUI
+
 <a name="rebuild1" />
 ### Windows
 ```bash
 pip install pyinstaller
 pyinstaller --onefile generate_tags_gui.py
 ```
+
 <a name="rebuild2" />
 ### Mac
 ```bash
