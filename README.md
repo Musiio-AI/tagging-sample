@@ -19,70 +19,68 @@ Musiio Tagging Code Sample (./samples/)
 
 ## Table of Contents
 
-[Postman Collection](#postman)
+[Postman Collection](#postman-collection)
 
-* [How to set up postman samples](#postman1)
-* [Upload Audio File](#postman2)
-* [Upload YouTube Link](#postman3)
-* [Upload Audio Link](#postman4)
-* [Extract Tags](#postman5)
+* [How to set up postman samples](#how-to-set-up-postman-samples)
+* [Upload Audio File](#upload-audio-file)
+* [Upload YouTube Link](#upload-youtube-link)
+* [Upload Audio Link](#upload-audio-link)
+* [Extract Tags](#extract-tags)
 
-[PHP Sample](#php)
+[PHP Sample](#php-sample)
 
-* [Upload Audio File](#php1)
-* [Upload YouTube Link](#php2)
-* [Upload Audio Link](#php3)
-* [Extract Tags](#php4)
+* [Upload Audio File](#upload-audio-file-1)
+* [Upload YouTube Link](#upload-youtube-link-1)
+* [Upload Audio Link](#upload-audio-link-1)
+* [Extract Tags](#extract-tags-1)
 
-[JavaScript Sample](#js)
+[JavaScript Sample](#javascript-sample)
 
-* [Upload Audio File](#js1)
-* [Upload YouTube Link](#js2)
-* [Upload Audio Link](#js3)
-* [Extract Tags](#js4)
+* [Upload Audio File](#upload-audio-file-2)
+* [Upload YouTube Link](#upload-youtube-link-2)
+* [Upload Audio Link](#upload-audio-link-2)
+* [Extract Tags](#extract-tags-2)
 
-[Python Individual Sample](#python1)
+[Python Individual Sample](#python-indiviual-sample)
 
-* [Set up running environment](#py11)
-* [Upload Audio File](#py12)
-* [Upload YouTube Link](#py13)
-* [Upload Audio Link](#py14)
-* [Extract Tags](#py15)
+* [Set up running environment](#set-up-running-environment)
+* [Upload Audio File](#upload-audio-file-3)
+* [Upload YouTube Link](#upload-youtube-link-3)
+* [Upload Audio Link](#upload-audio-link-3)
+* [Extract Tags](#extract-tags-3)
 
-[Python Integrated Sample](#python2)
+[Python Integrated Sample](#python-integrated-sample)
 
-* [Installation](#py21)
-* [Update constants.py with API Key](#py22)
-* [Tag Generation](#py23)
-* [Convert Tags to CSV](#py24)
+* [Installation](#installation)
+* [Update constants.py with API Key](#update-constantspy-with-api-key)
+* [Tag Generation](#tag-generation)
+* [Convert Tags to CSV](#convert-tags-to-csv)
 
-[Java Sample](#java)
+[Java Sample](#java-sample)
 
-* [Set up Maven project](#java1)
-* [Upload Audio File](#java2)
-* [Upload Audio Link](#java3)
-* [Upload YouTube Link](#java4)
-* [Extract Tags](#java5)
+* [Set up Maven project](#set-up-maven-project)
+* [Upload Audio File](#upload-audio-file-4)
+* [Upload Audio Link](#upload-audio-link-4)
+* [Upload YouTube Link](#upload-youtube-link-4)
+* [Extract Tags](#extract-tags-4)
 
-[Node.js Sample](#node)
+[Node.js Sample](#nodejs-sample)
 
-* [Set up dependency](#node1)
-* [Upload Audio File](#node2)
-* [Upload YouTube Link](#node3)
-* [Upload Audio Link](#node4)
-* [Extract Tags](#node5)
+* [Set up dependency](#set-up-dependency)
+* [Upload Audio File](#upload-audio-file-5)
+* [Upload YouTube Link](#upload-youtube-link-5)
+* [Upload Audio Link](#upload-audio-link-5)
+* [Extract Tags](#extract-tags-5)
 
-[Windows Executable GUI](#windows)
+[Windows Executable GUI](#windows-executable-gui)
 
-* [Tag Generation](#windows1)
-* [Convert Tags to CSV](#windows2)
+* [Tag Generation](#tag-generation-1)
+* [Convert Tags to CSV](#convert-tags-to-csv-1)
 
-[Rebuilding the GUI](#rebuild)
+[Rebuilding the GUI](#rebuilding-the-gui)
 
-* [Windows](#rebuild1)
-* [Mac](#rebuild2)
-
-<a name="postman"/>
+* [Windows](#windows)
+* [Mac](#mac)
 
 ## Postman Collection
 
@@ -91,7 +89,7 @@ If you don't have postman, download here: https://www.postman.com/downloads/
 Here is the collection public link:
 
 https://www.getpostman.com/collections/2d47eb75d66a50ed4308
-<a name="postman1" />
+
 ### How to set up postman samples
 
 1. Download postman and install it.
@@ -101,15 +99,17 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
 5. Press "Import" to import the collection
 6. You will see the collection folder appears on the left-side panel. Click to expand to see individual request query.
 7. Now you need to add your API key in to authorize your request. Click on the "three dots" icon on the right of the collection folder tab when your mouse hovers on it. Click "Edit". Under the "Authorization" tab, select "Basic Auth" and copy paste your **Tagging API key** into the "username" field. Leave the "password" field empty. Click "Update" to update your collection.
-8. Now you are all set and it is time to use the sample.
-<a name="postman2" />
+
+Now you are all set and it is time to use the sample.
+
 ### Upload Audio File
 
 1. Click on "Upload Audio File" query under your collection. On the main panel, click on "Body" and select "form-data"
 2. Input KEY as "audio" and press "Select Files" under VALUE to select an audio file to be uploaded
 3. Press "**Send**" to send the request.
-4. You will receive response at the bottom panel
-<a name="postman3" />
+
+You will receive response at the bottom panel
+
 ### Upload YouTube Link
 
 1. Click on "Upload YouTube Link" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
@@ -122,8 +122,9 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
    ```
 
 3. Press "**Send**" to send the request.
-4. You will receive response at the bottom panel
-<a name="postman4" />
+
+You will receive response at the bottom panel
+
 ### Upload Audio Link
 
 1. Click on "Upload Audio Link" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
@@ -136,7 +137,6 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
    ```
 3. Press "**Send**" to send the request.
 4. You will receive response at the bottom panel
-<a name="postman5" />
 ### Extract Tags
 
 1. Click on "Extract Tags" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
@@ -152,9 +152,7 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
 3. Press "**Send**" to send the request.
 4. You will receive response at the bottom panel
 
-<a name="php"/>
 ## PHP sample
-<a name="php1" />
 ### Upload Audio File
 
 `audio-upload.php`\
@@ -165,7 +163,7 @@ php audio-upload.php
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
-<a name="php2" />
+
 ### Upload YouTube Link
 
 `youtube-upload.php`\
@@ -176,7 +174,7 @@ php youtube-upload.php
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
-<a name="php3" />
+
 ### Upload Audio Link
 
 `upload-audio-link.php`\
@@ -187,7 +185,7 @@ php upload-audio-link.php
 ```
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
-<a name="php4" />
+
 ### Extract Tags
 
 `extract-tags.php`\
@@ -198,11 +196,11 @@ php extract-tags.php
 ```
 
 The response will be printed out in the console.
-<a name="js" />
+
 ## JavaScript (Frontend) sample
 
 JavaScript ( frontend ) tagging sample is to be integrated with frontend web application. Constants required are to be passed in. You can find the code sample in `samples/js/` folder. Response will be logged in web client console.
-<a name="js1" />
+
 ### Upload Audio File
 
 `upload-audio-file.js`
@@ -218,19 +216,18 @@ Input file needs to be obtained from the `<input>` tag, as shown in the example 
     var fileInput = document.getElementById("fileInput");
 </script>
  ```
-<a name="js2" />
 ### Upload YouTube Link
 
 `upload-youtube-link.js`
 
 Input required `API_KEY`, `YOUTUBE_LINK`. 
-<a name="js3" />
+
 ### Upload Audio Link
 
 `upload-audio-link.js`
 
 Input required `API_KEY`, `AUDIO_LINK`. 
-<a name="js4" />
+
 ### Extract Tags
 
 `extract-tags.js`
@@ -240,11 +237,11 @@ Input required `API_KEY`, `TRACK_ID`.
 Available tags: 
 
 `["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY SHARP", "ENERGY", "INSTRUMENTATION"]`
-<a name="python1" />
+
 ## Python individual sample
 
 The folder `samples/python-individual` contains scripts that handle individual track tagging
-<a name="py11" />
+
 ### Set up running environment
 
 To install all the dependencies necessary for the scripts. Run the following code in your terminal:
@@ -272,8 +269,6 @@ To deactivate virtual environment
 ```bash
 deactivate
 ```
-<a name="py12" />
-
 ### Upload Audio File
 
 `upload-audio-file.py`
@@ -285,8 +280,6 @@ To run:
 ```bash
 python upload-audio-file.py
 ```
-
-<a name="py13" />
 
 ### Upload YouTube Link
 
@@ -300,7 +293,6 @@ To run:
 python upload-youtube-link.py
 ```
 
-<a name="py14" />
 ### Upload Audio Link
 
 `upload-audio-link.py`
@@ -313,7 +305,6 @@ To run:
 python upload-audio-link.py
 ```
 
-<a name="py15" />
 ### Extract Tags
 
 `extract-tags.py`
@@ -330,7 +321,6 @@ To run:
 python extract-tags.py
 ```
 
-<a name="python2" />
 ## Python Integrated sample
 
 The folder `samples/python-integrated` contains scripts that take multiple audio tracks in one folder and tag them one-by-one and output into CSV file.
@@ -343,7 +333,6 @@ check all tag .json files located in a given folder and write the tags to a sing
 `constants.py`
 update the values of 'KEY' and 'BASE_URL' with your Musiio API Key and API Url\
 
-<a name="py21" />
 ### Installation
 
 ```bash
@@ -353,7 +342,6 @@ venv\Scripts\activate
 pip install -r requirements
 ```
 
-<a name="py22" />
 ### Update constants.py with API Key
 
 ```python
@@ -361,26 +349,22 @@ KEY = "Replace With Your Musiio API KEY"
 BASE_URL = "Replace with Your API URL"
 ```
 
-<a name="py23" />
 ### Tag Generation
 
 ```bash
 python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-path C:/tagging_scripts/tags --tag-selection "content type" "genre" "bpm" "key" "mood" "energy" "instrumentation"
 ```
 
-<a name="py24" />
 ### Convert Tags to CSV
 
 ```bash
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
 
-<a name="java" />
 ## Java sample
 
 `samples/java`
 
-<a name="java1" />
 ### Set up Maven project
 
 The Java sample shown here uses `Maven` as the Java project management tool. Hence, a `pom.xml` file is required for installing dependencies necessary to run the code samples. A detailed instruction on how to create a Maven project can be found here: https://spring.io/guides/gs/maven/
@@ -439,7 +423,7 @@ cd samples/tagging/java/tagging
 ```
 
 and then follow the commands below to run each file.
-<a name="java2" />
+
 ### Upload Audio File
 
 `AudioUpload.java`
@@ -461,7 +445,6 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.AudioUpload" -Dexec.args="au
 
 [Note: replace `com.example.tagging` with your own project group ID]
 
-<a name="java3" />
 ### Upload Audio Link
 
 `AudioLinkUpload.java`
@@ -483,7 +466,6 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.AudioLinkUpload" -Dexec.args
 
 [Note: replace `com.example.tagging` with your own project group ID]
 
-<a name="java4" />
 ### Upload YouTube Link
 
 `YouTubeUpload.java`
@@ -505,7 +487,6 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.YoutubeUpload" -Dexec.args="
 
 [Note: replace `com.example.tagging` with your own project group ID]
 
-<a name="java5" />
 ### Extract Tags
 
 `ExtractTags.java`
@@ -527,10 +508,8 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags" -Dexec.args="tr
 
 [Note: replace `com.example.tagging` with your own project group ID]
 
-<a name="node" />
 ## Node.js sample
 
-<a name="node1" />
 ### Set up dependency
 
 ```bash
@@ -538,7 +517,6 @@ cd samples/tagging/node
 npm install
 ```
 
-<a name="node2" />
 ### Upload Audio File
 
 `upload-audio-file.js\
@@ -550,7 +528,6 @@ node upload-audio-file.js
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
-<a name="node3" />
 ### Upload YouTube Link
 
 `upload-youtube-link.js`\
@@ -562,7 +539,6 @@ node upload-youtube-link.js
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
-<a name="node4" />
 ### Upload Audio Link
 
 `upload-audio-link.js`\
@@ -574,7 +550,6 @@ node upload-audio-link.js
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
-<a name="node5" />
 ### Extract Tags
 
 `extract-tags.js`
@@ -586,36 +561,30 @@ node extract-tags.js
 
 The response will be printed out in the console.
 
-<a name="windows" />
 ## Windows Executable GUI Usage
 
 Executables are located in the `windows` folder\
 **Note:** GUI applications for MacOS are currently not available for distribution, but you should be able to build them yourself using the instructions below under 'Rebuilding the GUI'
 
-<a name="windows1" />
 ### Tag Generation
 
 **Source Folder:** The folder where your audio tracks are stored\
 **Destination Folder:** The folder where you want your tag jsons to be saved\
 **API Key:** Replace with your Musiio API Key
 
-<a name="windows2" />
 ### Convert Tags to CSV
 
 **Tag Folder:** The folder containing your tag jsons\
 **Write CSV to Directory:** The folder where the CSV will be saved
 
-<a name="rebuild" />
 ## Rebuilding the GUI
 
-<a name="rebuild1" />
 ### Windows
 ```bash
 pip install pyinstaller
 pyinstaller --onefile generate_tags_gui.py
 ```
 
-<a name="rebuild2" />
 ### Mac
 ```bash
 pip install py2app==0.13
