@@ -17,7 +17,28 @@ Musiio Tagging Code Sample (./samples/)
 |--node/	(Node.js samples)
 ```
 
-[TOC]
+## Table of Contents
+
+[Postman Collection](#postman)
+
+[PHP Sample](#php)
+
+[JavaScript Sample](#js)
+
+[Python Individual Sample](#python1)
+
+[Python Integrated Sample](#python2)
+
+[Java Sample](#java)
+
+[Node.js Sample](#node)
+
+[Windows Executable GUI](#windows)
+
+[Rebuilding the GUI](#rebuild)
+
+
+<a name="postman"/>
 
 ## Postman Collection
 
@@ -87,6 +108,7 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
 3. Press "**Send**" to send the request.
 4. You will receive response at the bottom panel
 
+<a name="php"/>
 ## PHP sample
 
 ### Upload Audio File
@@ -132,7 +154,7 @@ php extract-tags.php
 ```
 
 The response will be printed out in the console.
-
+<a name="js" />
 ## JavaScript (Frontend) sample
 
 JavaScript ( frontend ) tagging sample is to be integrated with frontend web application. Constants required are to be passed in. You can find the code sample in `samples/js/` folder. Response will be logged in web client console.
@@ -174,7 +196,7 @@ Input required `API_KEY`, `TRACK_ID`.
 Available tags: 
 
 `["CONTENT TYPE", "GENRE V3", "MOOD", "BPM", "KEY", "KEY SHARP", "ENERGY", "INSTRUMENTATION"]`
-
+<a name="python1" />
 ## Python individual sample
 
 The folder `samples/python-individual` contains scripts that handle individual track tagging
@@ -258,7 +280,7 @@ To run:
 ```bash
 python extract-tags.py
 ```
-
+<a name="python2" />
 ## Python Integrated sample
 
 The folder `samples/python-integrated` contains scripts that take multiple audio tracks in one folder and tag them one-by-one and output into CSV file.
@@ -298,7 +320,7 @@ python generate_tags.py --source-path C:/tagging_scripts/tracks --destination-pa
 ```bash
 python tags_to_csv.py --tags-path C:/tagging_scripts/tags --tags-csv C:/tagging_scripts --tags-types "genre" "genre secondary" "mood" "mood secondary" "energy" "vocal presence" "instrument"
 ```
-
+<a name="java" />
 ## Java sample
 
 `samples/java`
@@ -445,7 +467,7 @@ mvn exec:java -Dexec.mainClass="com.example.tagging.ExtractTags" -Dexec.args="tr
 ```
 
 [Note: replace `com.example.tagging` with your own project group ID]
-
+<a name="node" />
 ## Node.js sample
 
 ### Set up dependency
@@ -498,7 +520,7 @@ node extract-tags.js
 ```
 
 The response will be printed out in the console.
-
+<a name="windows" />
 ## Windows Executable GUI Usage
 
 Executables are located in the `windows` folder\
@@ -515,7 +537,7 @@ Executables are located in the `windows` folder\
 
 **Tag Folder:** The folder containing your tag jsons\
 **Write CSV to Directory:** The folder where the CSV will be saved
-
+<a name="rebuild" />
 ## Rebuilding the GUI
 
 ### Windows
