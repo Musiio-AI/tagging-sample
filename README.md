@@ -480,7 +480,7 @@ The response will be printed out in the console. The `id` field will be the Trac
 
 **For large file**
 
-`Axios` have a default request body size of **2000 bytes**. To change that, simply add in the configuration as one of the `Axios` request function arguments like this:
+`Axios` have a default request body size of **2000 bytes**. To change that, simply modify `maxBodyLength` in the configuration as one of the `Axios` request function arguments like this:
 
 ```js
 var config = {
