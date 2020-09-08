@@ -17,7 +17,70 @@ Musiio Tagging Code Sample (./samples/)
 |--node/	(Node.js samples)
 ```
 
-[TOC]
+## Table of Contents
+
+[Postman Collection](#postman-collection)
+
+* [How to set up postman samples](#how-to-set-up-postman-samples)
+* [Upload Audio File](#upload-audio-file)
+* [Upload YouTube Link](#upload-youtube-link)
+* [Upload Audio Link](#upload-audio-link)
+* [Extract Tags](#extract-tags)
+
+[PHP Sample](#php-sample)
+
+* [Upload Audio File](#upload-audio-file-1)
+* [Upload YouTube Link](#upload-youtube-link-1)
+* [Upload Audio Link](#upload-audio-link-1)
+* [Extract Tags](#extract-tags-1)
+
+[JavaScript Sample](#javascript-sample)
+
+* [Upload Audio File](#upload-audio-file-2)
+* [Upload YouTube Link](#upload-youtube-link-2)
+* [Upload Audio Link](#upload-audio-link-2)
+* [Extract Tags](#extract-tags-2)
+
+[Python Individual Sample](#python-indiviual-sample)
+
+* [Set up running environment](#set-up-running-environment)
+* [Upload Audio File](#upload-audio-file-3)
+* [Upload YouTube Link](#upload-youtube-link-3)
+* [Upload Audio Link](#upload-audio-link-3)
+* [Extract Tags](#extract-tags-3)
+
+[Python Integrated Sample](#python-integrated-sample)
+
+* [Installation](#installation)
+* [Update constants.py with API Key](#update-constantspy-with-api-key)
+* [Tag Generation](#tag-generation)
+* [Convert Tags to CSV](#convert-tags-to-csv)
+
+[Java Sample](#java-sample)
+
+* [Set up Maven project](#set-up-maven-project)
+* [Upload Audio File](#upload-audio-file-4)
+* [Upload Audio Link](#upload-audio-link-4)
+* [Upload YouTube Link](#upload-youtube-link-4)
+* [Extract Tags](#extract-tags-4)
+
+[Node.js Sample](#nodejs-sample)
+
+* [Set up dependency](#set-up-dependency)
+* [Upload Audio File](#upload-audio-file-5)
+* [Upload YouTube Link](#upload-youtube-link-5)
+* [Upload Audio Link](#upload-audio-link-5)
+* [Extract Tags](#extract-tags-5)
+
+[Windows Executable GUI](#windows-executable-gui)
+
+* [Tag Generation](#tag-generation-1)
+* [Convert Tags to CSV](#convert-tags-to-csv-1)
+
+[Rebuilding the GUI](#rebuilding-the-gui)
+
+* [Windows](#windows)
+* [Mac](#mac)
 
 ## Postman Collection
 
@@ -36,14 +99,16 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
 5. Press "Import" to import the collection
 6. You will see the collection folder appears on the left-side panel. Click to expand to see individual request query.
 7. Now you need to add your API key in to authorize your request. Click on the "three dots" icon on the right of the collection folder tab when your mouse hovers on it. Click "Edit". Under the "Authorization" tab, select "Basic Auth" and copy paste your **Tagging API key** into the "username" field. Leave the "password" field empty. Click "Update" to update your collection.
-8. Now you are all set and it is time to use the sample.
+
+Now you are all set and it is time to use the sample.
 
 ### Upload Audio File
 
 1. Click on "Upload Audio File" query under your collection. On the main panel, click on "Body" and select "form-data"
 2. Input KEY as "audio" and press "Select Files" under VALUE to select an audio file to be uploaded
 3. Press "**Send**" to send the request.
-4. You will receive response at the bottom panel
+
+You will receive response at the bottom panel
 
 ### Upload YouTube Link
 
@@ -57,7 +122,8 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
    ```
 
 3. Press "**Send**" to send the request.
-4. You will receive response at the bottom panel
+
+You will receive response at the bottom panel
 
 ### Upload Audio Link
 
@@ -71,7 +137,6 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
    ```
 3. Press "**Send**" to send the request.
 4. You will receive response at the bottom panel
-
 ### Extract Tags
 
 1. Click on "Extract Tags" query under your collection. On the main panel, click on "Body" and select "raw", on the right select "JSON" in the dropdown menu.
@@ -88,7 +153,6 @@ https://www.getpostman.com/collections/2d47eb75d66a50ed4308
 4. You will receive response at the bottom panel
 
 ## PHP sample
-
 ### Upload Audio File
 
 `audio-upload.php`\
@@ -152,7 +216,6 @@ Input file needs to be obtained from the `<input>` tag, as shown in the example 
     var fileInput = document.getElementById("fileInput");
 </script>
  ```
-
 ### Upload YouTube Link
 
 `upload-youtube-link.js`
@@ -206,7 +269,6 @@ To deactivate virtual environment
 ```bash
 deactivate
 ```
-
 ### Upload Audio File
 
 `upload-audio-file.py`
@@ -510,7 +572,6 @@ Executables are located in the `windows` folder\
 **Destination Folder:** The folder where you want your tag jsons to be saved\
 **API Key:** Replace with your Musiio API Key
 
-
 ### Convert Tags to CSV
 
 **Tag Folder:** The folder containing your tag jsons\
@@ -523,6 +584,7 @@ Executables are located in the `windows` folder\
 pip install pyinstaller
 pyinstaller --onefile generate_tags_gui.py
 ```
+
 ### Mac
 ```bash
 pip install py2app==0.13
