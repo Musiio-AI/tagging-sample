@@ -14,16 +14,17 @@ var config = {
     username: API_KEY,
     password: ""
   },
-  headers: { 
+  headers: {
     ...data.getHeaders()
   },
-  data : data
+  data: data,
+  maxBodyLength: 2000 // Change the maximum body length in bytes allowable for the request if you want to upload larger file
 };
 
 axios(config)
-.then(function (response) {
-  console.log(JSON.stringify(response.data));
-})
-.catch(function (error) {
-  console.log(error);
-});
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

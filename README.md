@@ -528,7 +528,27 @@ node upload-audio-file.js
 
 The response will be printed out in the console. The `id` field will be the Track ID for tagging extraction.
 
-### Upload YouTube Link
+**For large file**
+
+`Axios` have a default request body size of **2000 bytes**. To change that, simply modify `maxBodyLength` in the configuration as one of the `Axios` request function arguments like this:
+
+```js
+var config = {
+  method: 'post',
+  url: 'https://api-us.musiio.com/api/v1/upload/file',
+  auth: {
+    username: API_KEY,
+    password: ""
+  },
+  headers: { 
+    ...data.getHeaders()
+  },
+  data : data,
+  maxBodyLength: 10000 // specify the request body length here!
+};
+```
+
+#### Upload YouTube Link
 
 `upload-youtube-link.js`\
 Open the file, replace `API_KEY` `YOUTUBE_LINK` with your own API key and the youtube track link. This script upload the youtube track onto Musiio Tagging Service. To run:
