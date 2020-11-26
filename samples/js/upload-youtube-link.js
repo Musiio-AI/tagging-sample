@@ -1,20 +1,27 @@
-const YOUTUBE_LINK = "";  // YouTube link here
+const YOUTUBE_LINK = "";  // Youtube link here
 const API_KEY = "";       // API key here
 
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Basic " + btoa(API_KEY + ":"));
+var axios  = require('axios');
+var data = JSON.stringify({"link": YOUTUBE_LINK});
 
-var raw = JSON.stringify({ "link": YOUTUBE_LINK });
-
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
+var config = {
+  method: 'post',
+  url: 'https://api-us.musiio.com/api/v1/upload/youtube-link',
+  auth: {
+    username: API_KEY,
+    password: ""
+  },
+  headers: { 
+    	'Content-Type': 'application/json'
+  },
+  data : data
 };
 
-fetch("https://api-us.musiio.com/api/v1/upload/youtube-link", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+

@@ -1,4 +1,4 @@
-# Python Individual Samples
+# Python Samples
 
 Contains scripts that handle individual track tagging.
 
@@ -10,8 +10,11 @@ For Mac:
 
 ```bash
 cd samples/tagging/python-individual
+
 virtualenv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
@@ -19,8 +22,11 @@ For Windows:
 
 ```bash
 cd samples\tagging\python-individual
+
 virtualenv venv
+
 venv\Scripts\activate.bat
+
 pip install -r requirements.txt
 ```
 

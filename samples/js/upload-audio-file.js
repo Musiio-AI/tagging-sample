@@ -1,26 +1,30 @@
-// fileInput is the input element on your webpage
-/* HTML
-<input type="file" id="fileInput">
-<script>
-    var fileInput = document.getElementById("fileInput");
-</script>
-*/
+const API_KEY = "";     // API key here
+const AUDIO_PATH = "";  // Audio file path here
 
-const API_KEY = ""; // API Key here
-var myHeaders = new Headers();
-myHeaders.append("Authorization", "Basic " + btoa(API_KEY + ":"));
+var axios = require('axios');
+var FormData = require('form-data');
+var fs = require('fs');
+var data = new FormData();
+data.append('audio', fs.createReadStream(AUDIO_PATH));
 
-var formdata = new FormData();
-formdata.append("audio", fileInput.files[0], "file");
-
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: formdata,
-  redirect: 'follow'
+var config = {
+  method: 'post',
+  url: 'https://api-us.musiio.com/api/v1/upload/file',
+  auth: {
+    username: API_KEY,
+    password: ""
+  },
+  headers: {
+    ...data.getHeaders()
+  },
+  data: data,
+  maxBodyLength: 2000 // Change the maximum body length in bytes allowable for the request if you want to upload larger file
 };
 
-fetch("https://api-us.musiio.com/api/v1/upload/file", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+axios(config)
+  .then(function (response) {
+    console.log(JSON.stringify(response.data));
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

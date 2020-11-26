@@ -1,4 +1,4 @@
-# Python Integrated Samples
+# Python Bulk Tagging Samples
 
 Contains scripts that take multiple audio tracks in one folder and tag them one-by-one and output into CSV file.
 
@@ -17,15 +17,18 @@ update the values of 'KEY' and 'BASE_URL' with your Musiio API Key and API Url\
 
 ```bash
 cd samples\tagging\python-integrated
+
 virtualenv venv
+
 venv\Scripts\activate
+
 pip install -r requirements
 ```
 
 ## Update constants.py with API Key
 
 ```python
-KEY = "Replace With Your Musiio API KEY"
+KEY = "Replace With Your Musiio Tagging API KEY"
 BASE_URL = "Replace with Your API URL"
 ```
 

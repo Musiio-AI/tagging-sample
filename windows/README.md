@@ -7,12 +7,12 @@ Executables are located in the [*windows* folder](.)
 ## Tag Generation
 
 **Source Folder:** The folder where your audio tracks are stored\
-**Destination Folder:** The folder where you want your tag jsons to be saved\
-**API Key:** Replace with your Musiio API Key
+**Destination Folder:** The folder where you want your tag json files to be saved\
+**API Key:** Replace with your Musiio Tagging API Key
 
 ## Convert Tags to CSV
 
-**Tag Folder:** The folder containing your tag jsons\
+**Tag Folder:** The folder containing your tag json files\
 **Write CSV to Directory:** The folder where the CSV will be saved
 
 ## Rebuilding the GUI
@@ -48,6 +48,7 @@ setup(
     setup_requires=['py2app'],
 )
 ```
+
 ```bash
 python setup.py py2app
 ```

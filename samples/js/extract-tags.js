@@ -1,32 +1,41 @@
-const API_KEY = ""; // API Key here
-const TRACK_ID = "";// Track ID here
+const API_KEY = "";     // API Key here
+const TRACK_ID = "";    // Track ID here
 
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Basic " + btoa(API_KEY + ":"));
+var axios = require('axios');
+var data = JSON.stringify(
+    {
+        "id": TRACK_ID,
+        "tags":
+        [
+            "CONTENT TYPE",
+            "GENRE V3",
+            "MOOD",
+            "BPM",
+            "KEY",
+            "KEY SHARP",
+            "ENERGY",
+            "INSTRUMENTATION"
+        ]
+    }
+);
 
-var raw = JSON.stringify({ 
-    "id": TRACK_ID, 
-    "tags": [
-        "CONTENT TYPE", 
-        "GENRE V3", 
-        "MOOD", 
-        "BPM", 
-        "KEY", 
-        "KEY SHARP", 
-        "ENERGY", 
-        "INSTRUMENTATION"
-    ] 
-});
-
-var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
+var config = {
+  method: 'post',
+  url: 'https://api-us.musiio.com/api/v1/extract/tags',
+  auth: {
+      username: API_KEY,
+      password: ''
+  },
+  headers: { 
+    'Content-Type': 'application/json'
+  },
+  data : data
 };
 
-fetch("https://api-us.musiio.com/api/v1/extract/tags", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});

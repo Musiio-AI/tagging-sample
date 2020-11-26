@@ -1,7 +1,7 @@
 {
-  "name": "node",
+  "name": "js-musiio",
   "version": "1.0.0",
-  "description": "Node.js Tagging Sample",
+  "description": "Javascript Tagging Sample",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
