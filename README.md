@@ -38,4 +38,4 @@ Musiio Tagging Code Sample (samples/)
 
 ## API Documentation
 
-To see the detailed API specifications, click [here](https://app.musiio.com/api)
+To see the detailed API specifications, click [here](API-DOC.md)
