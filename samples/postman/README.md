@@ -1,19 +1,19 @@
 ## Postman Collection
 
-If you don't have postman, download here: https://www.postman.com/downloads/
+You can download the [Postman app or use the web version](https://www.postman.com/downloads/).
 
-<!--- Here is the collection public URL:
+Go to the [Musiio by SoundCloud Public API workspace](https://www.postman.com/soundcloud-musiio/workspace/musiio-by-soundcloud-public-api-workspace/overview)
 
-https://www.getpostman.com/collections/2d47eb75d66a50ed4308 
+The workspace contains the:
 
--->
+[Tag API V1 Postman Collection](https://www.postman.com/soundcloud-musiio/workspace/musiio-by-soundcloud-public-api-workspace/collection/29141210-8cee2d19-5b14-4497-a931-3e72a50c85eb?action=share&creator=29141210)
 
-## How to set up postman samples
+## How to use the Postman Collection
 
 1. Download postman and install it.
 2. Open postman, at the top left corner click on "Import" button
 3. Choose "Link" tab
-4. Copy paste the collection public link in and click "Continue"
+4. Copy paste the Tag API collection [public link](https://www.postman.com/soundcloud-musiio/workspace/musiio-by-soundcloud-public-api-workspace/collection/29141210-8cee2d19-5b14-4497-a931-3e72a50c85eb?action=share&creator=29141210) and click "Continue"
 5. Press "Import" to import the collection
 6. You will see the collection folder appears on the left-side panel. Click to expand to see individual request query.
 7. Now you need to add your API key in to authorize your request. Click on the "three dots" icon on the right of the collection folder tab when your mouse hovers on it. Click "Edit". Under the "Authorization" tab, select "Basic Auth" and copy paste your **Tagging API key** into the "username" field. Leave the "password" field empty. Click "Update" to update your collection.
