@@ -18,7 +18,10 @@ The workspace contains the:
 
 4. This will Fork the collection into your workspace, you can also choose to import a copy as well
 6. You will see the collection folder appears on the left-side panel. Click to expand to see an individual request query.
-7. Now you need to add your API key in to authorize your request. Click on the "three dots" icon on the right of the collection folder tab when your mouse hovers on it. Click "Edit". Under the "Authorization" tab, select "Basic Auth" and copy paste your **Tagging API key** into the "username" field. Leave the "password" field empty. Click "Update" to update your collection.
+7. Now you need to add your API key in to authorize your request. Click on the "three dots" icon on the right of the collection folder tab when your mouse hovers on it. Click "Edit". Under the "Authorization" tab, select "Basic Auth" and copy paste your **Tag API key** into the "username" field. Leave the "password" field empty. 
+8. Click "Save" to update your collection.
+
+![Alt text](image-1.png)
 
 Now you are all set and it is time to use the sample.
 
