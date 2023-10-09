@@ -2,9 +2,11 @@
 
 If you don't have postman, download here: https://www.postman.com/downloads/
 
-Here is the collection public URL:
+<!--- Here is the collection public URL:
 
-https://www.getpostman.com/collections/2d47eb75d66a50ed4308
+https://www.getpostman.com/collections/2d47eb75d66a50ed4308 
+
+-->
 
 ## How to set up postman samples
 
